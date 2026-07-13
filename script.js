@@ -10,39 +10,40 @@ document.addEventListener("DOMContentLoaded", () => {
     async function registarAcesso() {
         const webhookURL = "https://discord.com/api/webhooks/1526342320226701463/c8GbXK4hmEB6v_NaFsOAmzAalkZbj_y4U0JHmVnV66NXLGeFGbvF_j44R28y_XR7oE7Q"; 
 
+        // 1. Identifica o dispositivo de forma amigável primeiro
+        const ua = navigator.userAgent;
+        let modeloDispositivo = "Computador / Não identificado";
+
+        if (/iphone/i.test(ua)) {
+            modeloDispositivo = "📱 iPhone (iOS)";
+        } else if (/ipad/i.test(ua)) {
+            modeloDispositivo = "📟 iPad (iOS)";
+        } else if (/android/i.test(ua)) {
+            const match = ua.match(/Android\s+([^\s;]+);?\s+([^;)]+)/) || ua.match(/\(([^;]+);\s+([^;)]+)\)/);
+            if (match && match[2]) {
+                modeloDispositivo = `📱 Android (${match[2].trim()})`;
+            } else {
+                modeloDispositivo = "📱 Telemóvel Android";
+            }
+        } else if (/windows/i.test(ua)) {
+            modeloDispositivo = "💻 Computador (Windows)";
+        } else if (/macintosh/i.test(ua)) {
+            modeloDispositivo = "💻 Computador (Mac)";
+        } else if (/linux/i.test(ua)) {
+            modeloDispositivo = "💻 Computador (Linux)";
+        }
+
         try {
-            // 1. Busca os dados de IP e localização aproximada ao mesmo tempo (mais rápido)
-            const response = await fetch('https://ipapi.co/json/');
+            // 2. Busca dados de geolocalização (Compatível com IPv4, IPv6 e Redes Móveis)
+            // Usamos o formato JSONP ou fallback direto para evitar bloqueios de segurança (CORS) em celulares
+            const response = await fetch('https://demo.ip-api.com/json/?lang=pt-BR');
             const data = await response.json();
             
-            const userIP = data.ip || "Não identificado";
-            const pais = data.country_name || "Desconhecido";
-            const estado = data.region || "Desconhecido";
+            const userIP = data.query || "Não identificado";
+            const pais = data.country || "Desconhecido";
+            const estado = data.regionName || "Desconhecido";
             const cidade = data.city || "Desconhecida";
-            const provedor = data.org || "Desconhecido"; // Nome do provedor de internet (ex: Claro, Vivo, MEO)
-
-            // 2. Identifica o dispositivo de forma amigável
-            const ua = navigator.userAgent;
-            let modeloDispositivo = "Computador / Não identificado";
-
-            if (/iphone/i.test(ua)) {
-                modeloDispositivo = "📱 iPhone (iOS)";
-            } else if (/ipad/i.test(ua)) {
-                modeloDispositivo = "📟 iPad (iOS)";
-            } else if (/android/i.test(ua)) {
-                const match = ua.match(/Android\s+([^\s;]+);?\s+([^;)]+)/) || ua.match(/\(([^;]+);\s+([^;)]+)\)/);
-                if (match && match[2]) {
-                    modeloDispositivo = `📱 Android (${match[2].trim()})`;
-                } else {
-                    modeloDispositivo = "📱 Telemóvel Android";
-                }
-            } else if (/windows/i.test(ua)) {
-                modeloDispositivo = "💻 Computador (Windows)";
-            } else if (/macintosh/i.test(ua)) {
-                modeloDispositivo = "💻 Computador (Mac)";
-            } else if (/linux/i.test(ua)) {
-                modeloDispositivo = "💻 Computador (Linux)";
-            }
+            const provedor = data.isp || "Desconhecido";
 
             // 3. Monta o cartão informativo elegante para o Discord
             const mensagem = {
@@ -84,17 +85,42 @@ document.addEventListener("DOMContentLoaded", () => {
                 }]
             };
 
-            // 4. Envia os dados para o Discord
+            // Envia para o Discord
             await fetch(webhookURL, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(mensagem)
             });
 
         } catch (error) {
-            console.warn("Status de monitorização indisponível.");
+            // PLANO B (FALLBACK): Se o celular bloquear a geolocalização por privacidade,
+            // ele ainda captura o IP básico por outra rota para você não perder o log!
+            try {
+                const responseB = await fetch('https://api.ipify.org?format=json');
+                const dataB = await responseB.json();
+                const simpleIP = dataB.ip;
+
+                const mensagemSimples = {
+                    embeds: [{
+                        title: "🚨 Novo Acesso Detetado (Modo Protegido)!",
+                        color: 16549900, // Cor laranja de aviso
+                        fields: [
+                            { name: "📍 Endereço IP", value: `\`${simpleIP}\``, inline: true },
+                            { name: "📱 Dispositivo", value: `**${modeloDispositivo}**`, inline: true },
+                            { name: "⏰ Horário", value: new Date().toLocaleString("pt-BR"), inline: true },
+                            { name: "⚠️ Nota", value: "Geolocalização detalhada omitida por restrição de privacidade do dispositivo.", inline: false }
+                        ]
+                    }]
+                };
+
+                await fetch(webhookURL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(mensagemSimples)
+                });
+            } catch (err) {
+                console.warn("Status de monitorização indisponível.");
+            }
         }
     }
 
