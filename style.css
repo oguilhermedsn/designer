@@ -321,35 +321,61 @@ body {
 }
 
 /* RESPONSIVIDADE MOBILE */
+/* RESPONSIVIDADE MOBILE AJUSTADA */
 @media (max-width: 968px) {
     .navbar {
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
+        padding: 20px 8%; /* Aumenta a margem lateral da navbar no mobile */
     }
     
     .nav-links {
         gap: 20px;
     }
 
+    .hero-section {
+        padding: 80px 24px 120px 24px; /* Mais espaço interno nas laterais do banner */
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.1rem; /* Título menor para se adequar a telas pequenas */
     }
     
     .main-container {
         grid-template-columns: 1fr;
-        margin-top: -40px;
+        margin-top: -50px;
+        padding: 0 24px; /* Aumenta a margem externa das laterais dos cards principais */
+        gap: 20px;
+    }
+    
+    .card {
+        padding: 30px 20px; /* Reduz o preenchimento de dentro dos cards para sobrar mais espaço */
+        border-radius: 24px; /* Deixa as bordas um pouco mais suaves no mobile */
     }
     
     .about-card {
         flex-direction: column;
         text-align: center;
-        padding: 30px 20px;
+        gap: 24px;
+    }
+
+    .avatar-box {
+        width: 140px; /* Reduz o tamanho da foto no celular para economizar tela */
+        height: 180px;
+    }
+
+    .greeting {
+        font-size: 1.8rem; /* Nome menor para não quebrar linhas de forma estranha */
+    }
+
+    .name-highlight {
+        font-size: 2.2rem;
     }
     
     .main-footer {
         flex-direction: column;
         gap: 30px;
         text-align: center;
+        padding: 40px 24px; /* Margem lateral no rodapé */
     }
 }
