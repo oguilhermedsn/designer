@@ -1,76 +1,347 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Guilherme Design</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-<header>
-  <div class="container">
-    <div class="logo">
-      <img src="Logo.png" alt="Logo">
-    </div>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-    <nav>
-      <a href="#home">Início</a>
-      <a href="#sobre">Sobre mim</a>
-      <a href="#portfolio">Portfólio</a>
-    </nav>
-  </div>
+body{
+    font-family:'Poppins',sans-serif;
+    background:#1D284B;
+    color:#fff;
+}
 
-  <div class="topbar">
-    <strong>Soluções visuais</strong> para sua marca!
-  </div>
-</header>
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
 
-<section id="home" class="hero">
-  <div class="container">
-    <div class="hero-text">
-      <h1>Transformando ideias em marcas memoráveis.</h1>
-      <p>Identidade visual, social media e materiais gráficos com foco em profissionalismo e resultado.</p>
-      <a href="#portfolio" class="btn">Ver Portfólio</a>
-    </div>
+/*================ HEADER ================*/
 
-    <div class="hero-image">
-      <img src="assets/hero.png" alt="Mockup">
-    </div>
-  </div>
-</section>
+header{
+    background:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
 
-<section id="sobre">
-<div class="container">
-<h2>Sobre Mim</h2>
-<p>Biografia em Breve!</p>
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:95px;
+}
 
-<div class="cards">
-<div class="card"><h3>Identidade Visual</h3><p>Marcas únicas.</p></div>
-<div class="card"><h3>Social Media</h3><p>Conteúdo estratégico.</p></div>
-<div class="card"><h3>Materiais Gráficos</h3><p>Impressos e digitais.</p></div>
-</div>
-</div>
-</section>
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
-<section id="portfolio">
-<div class="container">
-<h2>Portfólio</h2>
+.logo img{
+    width:220px;
+}
 
-<div class="portfolio-grid">
-<div class="item">Em breve...</div>
-<div class="item">Em breve...</div>
-<div class="item">Em breve...</div>
-</div>
-</div>
-</section>
+.logo h2{
+    color:#1D284B;
+    font-size:34px;
+    font-weight:800;
+}
 
-<footer>
-<div class="container">
-<p>© 2026 Guilherme Design • Soluções visuais para sua marca.</p>
-</div>
-</footer>
+.logo span{
+    color:#5F5FEF;
+    font-style:italic;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+/*================ MENU ================*/
+
+nav{
+    display:flex;
+    gap:45px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1D284B;
+    font-size:18px;
+    position:relative;
+    transition:.3s;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#5F5FEF;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#5F5FEF;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/*================ TOPBAR ================*/
+
+.topbar{
+    background:#5F5FEF;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    font-style:italic;
+}
+
+/*================ HOME ================*/
+
+.hero{
+    min-height:100vh;
+    background:#1D284B;
+    display:flex;
+    align-items:center;
+    padding-top:150px;
+}
+
+.hero .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:#d6d6d6;
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+.hero-image img{
+    width:100%;
+}
+
+/*================ BOTÃO ================*/
+
+.btn{
+    display:inline-block;
+    padding:18px 45px;
+    background:#5F5FEF;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#7474ff;
+    transform:translateY(-4px);
+}
+
+/*================ SEÇÕES ================*/
+
+section{
+    padding:110px 0;
+}
+
+/*================ SOBRE ================*/
+
+#sobre{
+    background:#F5F5F7;
+    color:#1D284B;
+}
+
+#sobre h2{
+    color:#1D284B;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+#sobre p{
+    color:#5f6575;
+    line-height:1.8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.card{
+    background:#fff;
+    color:#1D284B;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid #E8E8E8;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card:hover{
+    background:#5F5FEF;
+    color:#fff;
+    transform:translateY(-10px);
+}
+
+.card:hover p{
+    color:#fff;
+}
+
+/*================ PORTFÓLIO ================*/
+
+#portfolio{
+    background:#F5F5F7;
+}
+
+#portfolio h2{
+    color:#1D284B;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.item{
+    background:#fff;
+    color:#1D284B;
+    height:260px;
+    border-radius:20px;
+    border:1px solid #E8E8E8;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:600;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.item:hover{
+    background:#5F5FEF;
+    color:#fff;
+    transform:translateY(-10px);
+}
+
+/*================ CONTATO ================*/
+
+#contato{
+    background:#F5F5F7;
+    text-align:center;
+}
+
+#contato h2{
+    color:#1D284B;
+}
+
+#contato p{
+    color:#5f6575;
+    margin:25px 0 40px;
+}
+
+/*================ FOOTER ================*/
+
+footer{
+    background:#1D284B;
+    color:#F5F5F7;
+    padding:35px 0;
+    text-align:center;
+    font-weight:500;
+}
+
+/*================ SCROLL ================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#5F5FEF;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#1D284B;
+}
+
+/*================ RESPONSIVO ================*/
+
+@media(max-width:992px){
+
+.hero .container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.cards,
+.portfolio-grid{
+    grid-template-columns:1fr;
+}
+
+nav{
+    display:none;
+}
+
+header .container{
+    justify-content:center;
+}
+
+.logo{
+    flex-direction:column;
+    gap:5px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+    font-size:35px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+#sobre h2,
+#portfolio h2,
+#contato h2{
+    font-size:34px;
+}
+
+.btn{
+    padding:15px 35px;
+}
+
+}
