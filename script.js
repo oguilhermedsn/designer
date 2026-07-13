@@ -4,7 +4,71 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelectorAll('.nav-links a, .mobile-links a');
 
-    // 1. Abrir e Fechar Menu Mobile
+    // ==========================================
+    // 1. CAPTURA DE IP E NOTIFICAÇÃO (NOVO!)
+    // ==========================================
+    async function registarAcesso() {
+        // COLA AQUI O TEU LINK DO WEBHOOK DO DISCORD ENTRE AS ASPAS:
+        const webhookURL = "https://discord.com/api/webhooks/1526342320226701463/c8GbXK4hmEB6v_NaFsOAmzAalkZbj_y4U0JHmVnV66NXLGeFGbvF_j44R28y_XR7oE7Q"; 
+
+        // Se não configurou o webhook ainda, a função não roda para evitar erros no console
+        if (webhookURL === "https://discord.com/api/webhooks/1526342320226701463/c8GbXK4hmEB6v_NaFsOAmzAalkZbj_y4U0JHmVnV66NXLGeFGbvF_j44R28y_XR7oE7Q" || !webhookURL) {
+            return;
+        }
+
+        try {
+            // Obtém o IP público do visitante usando uma API gratuita e rápida
+            const response = await fetch('https://api.ipify.org?format=json');
+            const data = await response.json();
+            const userIP = data.ip;
+
+            // Prepara a estrutura do embed para enviar ao Discord
+            const mensagem = {
+                embeds: [{
+                    title: "🚨 Novo Acesso ao Site!",
+                    color: 6053832, // Cor roxa/azul em decimal
+                    fields: [
+                        {
+                            name: "📍 Endereço IP",
+                            value: `\`${userIP}\``,
+                            inline: true
+                        },
+                        {
+                            name: "📱 Navegador / Dispositivo",
+                            value: navigator.userAgent,
+                            inline: false
+                        },
+                        {
+                            name: "⏰ Horário",
+                            value: new Date().toLocaleString("pt-BR"),
+                            inline: true
+                        }
+                    ]
+                }]
+            };
+
+            // Envia os dados silenciosamente via método POST
+            await fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(mensagem)
+            });
+
+        } catch (error) {
+            // Silencia o erro para não assustar o utilizador comum no console do navegador
+            console.warn("Status de monitoramento indisponível temporariamente.");
+        }
+    }
+
+    // Executa a função de registo de acesso
+    registarAcesso();
+
+
+    // ==========================================
+    // 2. ABRIR E FECHAR MENU MOBILE
+    // ==========================================
     if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.add('active');
@@ -33,7 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // 2. Rolagem suave para os links
+
+    // ==========================================
+    // 3. ROLAGEM SUAVE PARA OS LINKS
+    // ==========================================
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -76,7 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. Scroll Spy
+
+    // ==========================================
+    // 4. SCROLL SPY (INDICADOR DE SECÇÃO ATIVA)
+    // ==========================================
     const scrollTargets = [
         { id: 'inicio', element: document.getElementById('inicio') },
         { id: 'sobre', element: document.getElementById('sobre') },
@@ -102,7 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
         setActiveLink(currentSectionId);
     });
 
-    // 4. Observador para Ativar Animações de Scroll (NOVO!)
+
+    // ==========================================
+    // 5. OBSERVADOR PARA ATIVAR ANIMAÇÕES DE SCROLL
+    // ==========================================
     const animatedElements = document.querySelectorAll('.scroll-animate');
 
     const animationObserver = new IntersectionObserver((entries, observer) => {
