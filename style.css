@@ -322,11 +322,12 @@ body {
 
 /* RESPONSIVIDADE MOBILE */
 /* RESPONSIVIDADE MOBILE AJUSTADA */
+/* RESPONSIVIDADE MOBILE CORRIGIDA */
 @media (max-width: 968px) {
     .navbar {
         flex-direction: column;
-        gap: 20px;
-        padding: 20px 8%; /* Aumenta a margem lateral da navbar no mobile */
+        gap: 16px;
+        padding: 20px 5%;
     }
     
     .nav-links {
@@ -334,48 +335,56 @@ body {
     }
 
     .hero-section {
-        padding: 80px 24px 120px 24px; /* Mais espaço interno nas laterais do banner */
+        padding: 60px 16px 100px 16px; /* Ajusta o preenchimento interno do banner */
     }
 
     .hero-title {
-        font-size: 2.1rem; /* Título menor para se adequar a telas pequenas */
+        font-size: 2rem; /* Reduz o tamanho da fonte para não estourar a largura da tela */
     }
     
     .main-container {
         grid-template-columns: 1fr;
-        margin-top: -50px;
-        padding: 0 24px; /* Aumenta a margem externa das laterais dos cards principais */
+        margin: -40px auto 40px auto; /* Reduzimos o recuo negativo para o card descer um pouco e não cobrir o título */
+        padding: 0 16px; /* Define uma margem de segurança nas laterais para o container */
+        width: 100%; /* Garante que ele ocupe a largura correta */
+        max-width: 100%;
         gap: 20px;
     }
     
     .card {
-        padding: 30px 20px; /* Reduz o preenchimento de dentro dos cards para sobrar mais espaço */
-        border-radius: 24px; /* Deixa as bordas um pouco mais suaves no mobile */
+        padding: 30px 16px; /* Diminui o espaçamento de dentro do card para sobrar mais espaço na tela */
+        border-radius: 24px;
+        width: 100%; /* Força o card a respeitar os limites do container */
     }
     
     .about-card {
         flex-direction: column;
         text-align: center;
-        gap: 24px;
+        gap: 20px;
     }
 
     .avatar-box {
-        width: 140px; /* Reduz o tamanho da foto no celular para economizar tela */
+        width: 140px; /* Reduz a largura da imagem do avatar no mobile */
         height: 180px;
     }
 
     .greeting {
-        font-size: 1.8rem; /* Nome menor para não quebrar linhas de forma estranha */
+        font-size: 1.6rem;
     }
 
     .name-highlight {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .bio-text {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
     }
     
     .main-footer {
         flex-direction: column;
-        gap: 30px;
+        gap: 24px;
         text-align: center;
-        padding: 40px 24px; /* Margem lateral no rodapé */
+        padding: 40px 16px;
     }
 }
