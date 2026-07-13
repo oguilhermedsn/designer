@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#1E294A;
+    min-height:100vh;
+
+}
+
+/* HEADER */
+
+header{
+
+    width:100%;
+
+}
+
+.navbar{
+
+    background:#fff;
+
+    height:110px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+}
+
+.logo img{
+
+    width:220px;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:70px;
+
+}
+
+nav a{
+
+    color:#162445;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#5F61F2;
+
+}
+
+.slogan{
+
+    width:100%;
+    height:36px;
+
+    background:#5F61F2;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:18px;
+
+}
+
+.slogan strong{
+
+    font-weight:700;
+
+}
+
+/* HERO */
+
+.hero{
+
+    height:calc(100vh - 196px);
+
+    background:#1E294A;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    background:white;
+
+    height:86px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+}
+
+footer img{
+
+    width:130px;
+
+}
+
+.social{
+
+    display:flex;
+    gap:12px;
+
+}
+
+.social a{
+
+    width:42px;
+    height:42px;
+
+    background:#5F61F2;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* MENU HAMBURGUER */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:32px;
+    color:#162445;
+    cursor:pointer;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        height:90px;
+
+    }
+
+    .logo img{
+
+        width:170px;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    nav{
+
+        position:absolute;
+
+        top:90px;
+        left:0;
+
+        width:100%;
+
+        background:white;
+
+        max-height:0;
+
+        overflow:hidden;
+
+        transition:.4s;
+
+        box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+    }
+
+    nav.active{
+
+        max-height:350px;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+        gap:0;
+
+    }
+
+    nav li{
+
+        border-bottom:1px solid #eee;
+
+    }
+
+    nav a{
+
+        display:block;
+
+        padding:22px;
+
+        font-size:20px;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:15px;
+
+        height:auto;
+
+        padding:25px;
+
+    }
+
+    .hero{
+
+        height:calc(100vh - 212px);
+
+    }
+
+}
