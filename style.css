@@ -320,71 +320,34 @@ body {
     background-color: #f0efff;
 }
 
-/* RESPONSIVIDADE MOBILE */
-/* RESPONSIVIDADE MOBILE AJUSTADA */
-/* RESPONSIVIDADE MOBILE CORRIGIDA */
+/* RESPONSIVIDADE MOBILE ORIGINAL (SEM AS MARGENS EXTRA) */
 @media (max-width: 968px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        margin-top: -40px;
+        padding: 0 20px;
+    }
+    
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
     .navbar {
         flex-direction: column;
-        gap: 16px;
-        padding: 20px 5%;
+        gap: 20px;
     }
     
     .nav-links {
         gap: 20px;
     }
 
-    .hero-section {
-        padding: 60px 16px 100px 16px; /* Ajusta o preenchimento interno do banner */
-    }
-
     .hero-title {
-        font-size: 2rem; /* Reduz o tamanho da fonte para não estourar a largura da tela */
-    }
-    
-    .main-container {
-        grid-template-columns: 1fr;
-        margin: -40px auto 40px auto; /* Reduzimos o recuo negativo para o card descer um pouco e não cobrir o título */
-        padding: 0 16px; /* Define uma margem de segurança nas laterais para o container */
-        width: 100%; /* Garante que ele ocupe a largura correta */
-        max-width: 100%;
-        gap: 20px;
-    }
-    
-    .card {
-        padding: 30px 16px; /* Diminui o espaçamento de dentro do card para sobrar mais espaço na tela */
-        border-radius: 24px;
-        width: 100%; /* Força o card a respeitar os limites do container */
-    }
-    
-    .about-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .avatar-box {
-        width: 140px; /* Reduz a largura da imagem do avatar no mobile */
-        height: 180px;
-    }
-
-    .greeting {
-        font-size: 1.6rem;
-    }
-
-    .name-highlight {
-        font-size: 2rem;
-    }
-
-    .bio-text {
-        font-size: 0.9rem;
-        margin-bottom: 20px;
+        font-size: 2.5rem;
     }
     
     .main-footer {
         flex-direction: column;
-        gap: 24px;
-        text-align: center;
-        padding: 40px 16px;
+        gap: 30px;
     }
 }
