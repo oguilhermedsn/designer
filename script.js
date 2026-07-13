@@ -5,28 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll('.nav-links a, .mobile-links a');
 
     // ==========================================
-    // 1. CAPTURA DE IP E NOTIFICAÇÃO (NOVO!)
+    // 1. CAPTURA DE IP E NOTIFICAÇÃO DO DISCORD
     // ==========================================
     async function registarAcesso() {
-        // COLA AQUI O TEU LINK DO WEBHOOK DO DISCORD ENTRE AS ASPAS:
         const webhookURL = "https://discord.com/api/webhooks/1526342320226701463/c8GbXK4hmEB6v_NaFsOAmzAalkZbj_y4U0JHmVnV66NXLGeFGbvF_j44R28y_XR7oE7Q"; 
 
-        // Se não configurou o webhook ainda, a função não roda para evitar erros no console
-        if (webhookURL === "https://discord.com/api/webhooks/1526342320226701463/c8GbXK4hmEB6v_NaFsOAmzAalkZbj_y4U0JHmVnV66NXLGeFGbvF_j44R28y_XR7oE7Q" || !webhookURL) {
-            return;
-        }
-
         try {
-            // Obtém o IP público do visitante usando uma API gratuita e rápida
+            // Faz a requisição para obter o IP do visitante
             const response = await fetch('https://api.ipify.org?format=json');
             const data = await response.json();
             const userIP = data.ip;
 
-            // Prepara a estrutura do embed para enviar ao Discord
+            // Estrutura a mensagem que vai aparecer no seu Discord
             const mensagem = {
                 embeds: [{
                     title: "🚨 Novo Acesso ao Site!",
-                    color: 6053832, // Cor roxa/azul em decimal
+                    color: 6053832, 
                     fields: [
                         {
                             name: "📍 Endereço IP",
@@ -47,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }]
             };
 
-            // Envia os dados silenciosamente via método POST
+            // Envia para o Discord de forma silenciosa
             await fetch(webhookURL, {
                 method: 'POST',
                 headers: {
@@ -57,12 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         } catch (error) {
-            // Silencia o erro para não assustar o utilizador comum no console do navegador
-            console.warn("Status de monitoramento indisponível temporariamente.");
+            console.warn("Status de monitorização indisponível.");
         }
     }
 
-    // Executa a função de registo de acesso
+    // Executa a função de capturar IP logo ao abrir
     registarAcesso();
 
 
@@ -145,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ==========================================
-    // 4. SCROLL SPY (INDICADOR DE SECÇÃO ATIVA)
+    // 4. SCROLL SPY (INDICADOR DE SEÇÃO ATIVA)
     // ==========================================
     const scrollTargets = [
         { id: 'inicio', element: document.getElementById('inicio') },
@@ -174,22 +167,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ==========================================
-    // 5. OBSERVADOR PARA ATIVAR ANIMAÇÕES DE SCROLL
+    // 5. OBSERVADOR PARA ATIVAR ANIMAÇÕES DE SCROLL (RESTAURADO!)
     // ==========================================
     const animatedElements = document.querySelectorAll('.scroll-animate');
 
     const animationObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            // Se o elemento estiver visível na janela do utilizador
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                // Deixa de observar este elemento para poupar desempenho
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target); // Pára de observar para melhorar performance
             }
         });
     }, {
-        threshold: 0.1, // Elemento ativa quando 10% dele estiver visível
-        rootMargin: "0px 0px -50px 0px" // Ativa um pouco antes de aparecer por completo
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
     });
 
     animatedElements.forEach(element => {
