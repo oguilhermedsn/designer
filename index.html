@@ -1,78 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Guilherme Design</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Guilherme Design</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-
-    <div class="navbar">
-
-        <div class="logo">
-            <img src="Logo.png" alt="">
-        </div>
-
-        <nav>
-
-            <ul id="menu">
-
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Portfólio</a></li>
-
-            </ul>
-
-        </nav>
-
-        <div class="menu-btn">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </div>
-
+  <div class="container">
+    <div class="logo">
+      <img src="Logo.png" alt="Logo">
     </div>
 
-    <div class="slogan">
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#portfolio">Portfólio</a>
+    </nav>
+  </div>
 
-        Soluções visuais para sua marca!
-
-    </div>
-
+  <div class="topbar">
+    <strong>Soluções visuais</strong> para sua marca!
+  </div>
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <h1>Transformando ideias em marcas memoráveis.</h1>
+      <p>Identidade visual, social media e materiais gráficos com foco em profissionalismo e resultado.</p>
+      <a href="#portfolio" class="btn">Ver Portfólio</a>
+    </div>
 
+    <div class="hero-image">
+      <img src="assets/hero.png" alt="Mockup">
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+<div class="container">
+<h2>Sobre Mim</h2>
+<p>Biografia em Breve!</p>
+
+<div class="cards">
+<div class="card"><h3>Identidade Visual</h3><p>Marcas únicas.</p></div>
+<div class="card"><h3>Social Media</h3><p>Conteúdo estratégico.</p></div>
+<div class="card"><h3>Materiais Gráficos</h3><p>Impressos e digitais.</p></div>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="container">
+<h2>Portfólio</h2>
+
+<div class="portfolio-grid">
+<div class="item">Em breve...</div>
+<div class="item">Em breve...</div>
+<div class="item">Em breve...</div>
+</div>
+</div>
 </section>
 
 <footer>
-
-    <img src="Logo.png">
-
-    <div class="social">
-
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-behance"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-
-    </div>
-
+<div class="container">
+<p>© 2026 Guilherme Design • Soluções visuais para sua marca.</p>
+</div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
