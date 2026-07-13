@@ -5,21 +5,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll('.nav-links a, .mobile-links a');
 
     // ==========================================
-    // 1. CAPTURA DE IP E NOTIFICAÇÃO DO DISCORD
+    // 1. CAPTURA DE IP, DISPOSITIVO, LOCALIZAÇÃO E DISCORD
     // ==========================================
     async function registarAcesso() {
         const webhookURL = "https://discord.com/api/webhooks/1526342320226701463/c8GbXK4hmEB6v_NaFsOAmzAalkZbj_y4U0JHmVnV66NXLGeFGbvF_j44R28y_XR7oE7Q"; 
 
         try {
-            // Faz a requisição para obter o IP do visitante
-            const response = await fetch('https://api.ipify.org?format=json');
+            // 1. Busca os dados de IP e localização aproximada ao mesmo tempo (mais rápido)
+            const response = await fetch('https://ipapi.co/json/');
             const data = await response.json();
-            const userIP = data.ip;
+            
+            const userIP = data.ip || "Não identificado";
+            const pais = data.country_name || "Desconhecido";
+            const estado = data.region || "Desconhecido";
+            const cidade = data.city || "Desconhecida";
+            const provedor = data.org || "Desconhecido"; // Nome do provedor de internet (ex: Claro, Vivo, MEO)
 
-            // Estrutura a mensagem que vai aparecer no seu Discord
+            // 2. Identifica o dispositivo de forma amigável
+            const ua = navigator.userAgent;
+            let modeloDispositivo = "Computador / Não identificado";
+
+            if (/iphone/i.test(ua)) {
+                modeloDispositivo = "📱 iPhone (iOS)";
+            } else if (/ipad/i.test(ua)) {
+                modeloDispositivo = "📟 iPad (iOS)";
+            } else if (/android/i.test(ua)) {
+                const match = ua.match(/Android\s+([^\s;]+);?\s+([^;)]+)/) || ua.match(/\(([^;]+);\s+([^;)]+)\)/);
+                if (match && match[2]) {
+                    modeloDispositivo = `📱 Android (${match[2].trim()})`;
+                } else {
+                    modeloDispositivo = "📱 Telemóvel Android";
+                }
+            } else if (/windows/i.test(ua)) {
+                modeloDispositivo = "💻 Computador (Windows)";
+            } else if (/macintosh/i.test(ua)) {
+                modeloDispositivo = "💻 Computador (Mac)";
+            } else if (/linux/i.test(ua)) {
+                modeloDispositivo = "💻 Computador (Linux)";
+            }
+
+            // 3. Monta o cartão informativo elegante para o Discord
             const mensagem = {
                 embeds: [{
-                    title: "🚨 Novo Acesso ao Site!",
+                    title: "🚨 Novo Acesso Detetado!",
                     color: 6053832, 
                     fields: [
                         {
@@ -28,20 +56,35 @@ document.addEventListener("DOMContentLoaded", () => {
                             inline: true
                         },
                         {
-                            name: "📱 Navegador / Dispositivo",
-                            value: navigator.userAgent,
-                            inline: false
+                            name: "🔌 Dispositivo / Modelo",
+                            value: `**${modeloDispositivo}**`,
+                            inline: true
                         },
                         {
                             name: "⏰ Horário",
                             value: new Date().toLocaleString("pt-BR"),
                             inline: true
+                        },
+                        {
+                            name: "🗺️ Localização Aproximada",
+                            value: `🌍 **${pais}**\n📌 **${estado}**, ${cidade}`,
+                            inline: true
+                        },
+                        {
+                            name: "📶 Provedor de Internet",
+                            value: `\`${provedor}\``,
+                            inline: true
+                        },
+                        {
+                            name: "🌐 User-Agent (Técnico)",
+                            value: `\`${ua}\``,
+                            inline: false
                         }
                     ]
                 }]
             };
 
-            // Envia para o Discord de forma silenciosa
+            // 4. Envia os dados para o Discord
             await fetch(webhookURL, {
                 method: 'POST',
                 headers: {
@@ -55,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Executa a função de capturar IP logo ao abrir
+    // Executa a monitorização silenciosa ao abrir a página
     registarAcesso();
 
 
@@ -76,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Ativa links de navegação de forma única
     const setActiveLink = (sectionId) => {
         navLinks.forEach(link => {
             link.classList.remove('active');
@@ -167,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ==========================================
-    // 5. OBSERVADOR PARA ATIVAR ANIMAÇÕES DE SCROLL (RESTAURADO!)
+    // 5. OBSERVADOR PARA ATIVAR ANIMAÇÕES DE SCROLL
     // ==========================================
     const animatedElements = document.querySelectorAll('.scroll-animate');
 
@@ -175,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                observer.unobserve(entry.target); // Pára de observar para melhorar performance
+                observer.unobserve(entry.target); 
             }
         });
     }, {
