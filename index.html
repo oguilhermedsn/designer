@@ -110,6 +110,9 @@ form{display:grid;grid-template-columns:1fr;gap:20px}
 .send::before{background:#fff}.send:hover{color:var(--navy)}
 #st{grid-column:1/-1;min-height:1.4em;font-weight:300}
 footer{background:var(--gray);display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;padding:34px var(--pad);font-size:.85rem;font-weight:300}
+#site-visit-counter{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:150px;color:var(--navy)}
+#site-visit-counter .visit-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.7}
+#site-visit-counter .counterapi{min-height:1.5em;font-size:1.25rem;font-weight:700;line-height:1.2;color:var(--navy)}
 footer .logo{width:130px}
 footer nav a{font-size:.85rem}
 
@@ -524,7 +527,10 @@ form.panel.in{animation:panel 1s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards
 <div><h4>Navegação</h4><nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#processo">Processo</a><a href="#faq">Dúvidas</a></nav></div>
 <div><h4>Serviços</h4><nav aria-label="Serviços"><a href="#projetos">Designer gráfico</a><a href="#projetos">Edições de vídeos</a><a href="#projetos">Motion design</a></nav></div>
 <div><h4>Contato</h4><nav aria-label="Contato"><a href="https://wa.me/5546933001459" target="_blank" rel="noopener">WhatsApp</a><a href="#contato">Pedir orçamento</a></nav></div>
+<div id="site-visit-counter" aria-label="Contador de acessos ao site"><span class="visit-label">Acessos ao site</span><div class="counterapi" key="site-total" action="view" noCss="true" noIcon="true" noLink="true" label="acessos"></div></div>
 <span>© Todos os direitos reservados. - Guilherme Design</span></footer>
+
+<script src="https://counterapi.com/c.js" async></script>
 
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],RM=matchMedia('(prefers-reduced-motion:reduce)').matches,EMAIL="";
