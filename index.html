@@ -283,13 +283,179 @@ header > a { flex: 0 1 auto; min-width: 0; }
  *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
 }
 
+
+/* v6 · versão agência */
+:root{--r:28px}
+nav{gap:clamp(14px,2.5vw,40px)}nav a:nth-child(n+4){animation-delay:.8s}
+.g{background:var(--gray)}.nv{background:var(--navy);color:#fff}
+.h3s{font-size:clamp(1.6rem,3vw,2.8rem);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:clamp(56px,8vw,100px) 0 clamp(20px,3vw,36px)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,48px);margin-top:clamp(28px,4vw,56px)}
+.cols.c4{grid-template-columns:repeat(4,1fr)}.h3s+.cols{margin-top:0}
+.cols>div{border-top:2px solid var(--navy);padding-top:18px}
+.cols h4{font-size:1.15rem;font-weight:700;letter-spacing:-.02em}
+.cols p,.cols li{font-weight:300;line-height:1.6;font-size:.92rem;margin-top:10px}
+.cols ul{list-style:none;padding:0}.cols li{margin-top:8px}
+.n{display:block;font-weight:800;font-size:clamp(2rem,3vw,3rem);letter-spacing:-.04em;color:var(--star);line-height:1.2}
+.sob{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);margin-top:clamp(36px,5vw,70px);align-items:start}
+.big{font-size:clamp(1.25rem,2vw,1.9rem);line-height:1.35;font-weight:300;letter-spacing:-.02em}.big b{font-weight:700}
+.sob p:not(.big){margin-top:20px;font-weight:300;line-height:1.7}.sob .tags{margin-top:12px}
+.facts{background:var(--navy);color:#fff;border-radius:var(--r);padding:clamp(6px,1vw,12px) clamp(22px,2.6vw,38px)}
+.facts div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.facts div:last-child{border:0}.facts dt{font-weight:300}
+.facts dd{margin:0;font-weight:800;font-size:clamp(1.5rem,2.4vw,2.2rem);letter-spacing:-.03em;color:var(--blue)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
+.plan{display:flex;flex-direction:column;gap:14px;padding:clamp(22px,2.4vw,34px);border-radius:var(--r);background:#fff}
+.plan.hi{background:var(--navy);color:#fff}
+.plan h4{font-size:1.5rem;font-weight:800;letter-spacing:-.04em}.plan p{font-weight:300;line-height:1.55}
+.plan ul{list-style:none;padding:0;display:grid;gap:9px;font-size:.9rem;font-weight:300;line-height:1.5}
+.plan li::before{content:"★";color:var(--star);margin-right:8px;font-size:.75em}
+.plan .card-link{margin-top:auto}
+.plan:not(.hi) .card-link:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.flt{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(24px,3vw,40px)}
+.flt button{padding:.55em 1.1em;border:1.5px solid var(--navy);border-radius:99px;background:none;color:inherit;font:600 .8rem Sora;cursor:pointer;transition:background .25s,color .25s}
+.flt button:hover,.flt button[aria-pressed=true]{background:var(--navy);color:#fff}
+.pg{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(22px,2.6vw,36px);margin-top:clamp(24px,3vw,40px)}
+.pj{display:block}.pj[hidden]{display:none}
+.pj:first-child{grid-column:1/-1}.pj:first-child .th{aspect-ratio:16/8}
+.th{position:relative;aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:var(--bg);transition:border-radius .4s}
+.pj:hover .th{border-radius:10px}
+.pj:nth-child(3n+1) .th{--bg:var(--gray);--fg:var(--navy);--ac:var(--blue)}
+.pj:nth-child(3n+2) .th{--bg:var(--navy);--fg:#fff;--ac:var(--blue)}
+.pj:nth-child(3n) .th{--bg:var(--blue);--fg:var(--navy);--ac:#fff}
+.th i{position:absolute;display:block}
+.k-d i:nth-child(1){height:70%;aspect-ratio:1;border-radius:50%;background:var(--ac);left:14%;top:14%}
+.k-d i:nth-child(2){height:48%;aspect-ratio:1;border-radius:16%;background:var(--fg);left:46%;top:40%}
+.k-d i:nth-child(3){height:16%;width:30%;border:3px solid var(--fg);border-radius:99px;left:60%;top:14%}
+.k-v i:nth-child(1){height:30%;aspect-ratio:1;border-radius:50%;background:var(--fg);left:50%;top:26%;translate:-50% 0}
+.k-v i:nth-child(1)::after{content:"";position:absolute;left:38%;top:30%;border:solid transparent;border-width:.5em 0 .5em .85em;border-left-color:var(--bg)}
+.k-v i:nth-child(2){height:8%;width:42%;border-radius:5px;background:var(--ac);left:8%;bottom:16%}
+.k-v i:nth-child(3){height:8%;width:44%;border-radius:5px;background:var(--fg);left:52%;bottom:16%}
+.k-m i:nth-child(1){height:34%;aspect-ratio:1;border-radius:50%;background:var(--fg);left:50%;top:18%;translate:-50% 0}
+.k-m i:nth-child(2){left:14%;right:14%;top:40%;height:44%;border:2.5px dashed var(--ac);border-bottom:0;border-radius:99px 99px 0 0}
+.cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:16px}
+.cap b{font-size:1.2rem;font-weight:700;letter-spacing:-.02em}.cap span{font-size:.8rem;font-weight:600;white-space:nowrap}
+.pj p{margin-top:4px;font-weight:300;font-size:.92rem}
+.h2n{font-weight:800;font-size:clamp(2rem,4.4vw,4.6rem);line-height:1.04;letter-spacing:-.035em;max-width:14em}
+.qs{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(14px,2vw,24px);margin-top:clamp(30px,4vw,56px)}
+.q{display:flex;flex-direction:column;justify-content:space-between;gap:26px;padding:clamp(22px,2.6vw,36px);border-radius:var(--r);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16)}
+.q:first-child{grid-row:span 2}.q p{font-weight:300;line-height:1.6}
+.q:first-child p{font-size:clamp(1.3rem,2.1vw,1.95rem);line-height:1.35;letter-spacing:-.02em}
+.q footer{all:unset;display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:300}.q footer b{display:block;font-weight:700}
+.av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--blue);color:var(--navy);display:grid;place-items:center;font-weight:800}
+.fq{margin-top:clamp(28px,4vw,50px)}
+.fq details{border-bottom:1.5px solid rgba(13,33,74,.25)}.fq details:first-child{border-top:1.5px solid rgba(13,33,74,.25)}
+.fq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-weight:700;font-size:clamp(1rem,1.4vw,1.3rem);letter-spacing:-.02em;cursor:pointer}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"+";font-size:1.8rem;font-weight:300;color:var(--star);transition:transform .3s}
+.fq details[open] summary::after{transform:rotate(45deg)}
+.fq details p{padding:0 0 22px;max-width:44em;font-weight:300;line-height:1.7}
+.ci{list-style:none;padding:0;margin-top:28px;display:grid;gap:12px;font-weight:300}
+.ci li::before{content:"★";color:var(--blue);margin-right:10px;font-size:.8em}
+form.panel{grid-template-rows:auto auto minmax(96px,1fr) auto}.panel .f.sv{grid-column:1/-1}
+footer p{font-weight:300;line-height:1.6;max-width:22em;margin-top:14px}
+footer h4{font-size:.85rem;font-weight:700;margin-bottom:14px}
+@media(min-width:901px){footer{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+@media(max-width:900px){
+.sob,.qs,.cols,.plans{grid-template-columns:1fr}.cols.c4{grid-template-columns:1fr 1fr}.q:first-child{grid-row:auto}
+footer{grid-template-columns:1fr 1fr}
+header{flex-wrap:nowrap}#nav{flex:1 1 0;min-width:0;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none;gap:22px}
+#nav::-webkit-scrollbar{display:none}#nav a{flex:none;white-space:nowrap;padding:6px 0 10px}.ind{bottom:0}}
+@media(max-width:560px){header{flex-wrap:wrap}.pg,.cols.c4,footer{grid-template-columns:1fr}.pj:first-child .th{aspect-ratio:4/3}}
+
+/* v6.1 */
+.facts dd{font-size:1rem;letter-spacing:0;text-align:right;color:var(--blue);font-weight:700}
+.mb{display:none}
+@media(max-width:900px){
+header{flex-wrap:nowrap!important;align-items:center;padding:14px var(--pad)}
+header>a{flex:0 1 auto!important;justify-content:flex-start!important}
+.mb{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0 10px;margin-left:auto;border:0;background:none;cursor:pointer}
+.mb i{display:block;height:2.5px;border-radius:2px;background:var(--navy);transition:transform .3s,opacity .3s}
+header.op .mb i:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+header.op .mb i:nth-child(2){opacity:0}
+header.op .mb i:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+#nav{display:none;position:absolute;left:0;right:0;top:100%;flex:none;width:auto!important;flex-direction:column;align-items:stretch;gap:0;overflow:visible;background:#fff;padding:6px var(--pad) 18px;box-shadow:0 24px 40px -22px rgba(13,33,74,.4)}
+header.op #nav{display:flex}
+#nav a{padding:15px 0!important;font-size:1rem!important;border-bottom:1px solid rgba(13,33,74,.12);animation:none}
+#nav a:last-child{border:0}.ind{display:none}}
+
+/* planos modernos */
+.plan{position:relative;overflow:hidden;gap:22px;padding:clamp(26px,2.8vw,40px);border:1px solid rgba(13,33,74,.1);transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .3s ease-out,box-shadow .4s}
+.plan:hover{transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-6px);box-shadow:0 30px 50px -28px rgba(13,33,74,.45)}
+.plan>*{position:relative}
+.plan::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),rgba(139,167,232,.35),transparent 65%);opacity:0;transition:opacity .4s;pointer-events:none}
+.plan:hover::before{opacity:1}
+.plan.hi{background:linear-gradient(155deg,#1b3b83,var(--navy) 60%);border-color:transparent}
+.plan h4{font-size:clamp(1.7rem,2.4vw,2.2rem);line-height:1}
+.plan ul{display:block;font-size:.92rem;margin-bottom:10px}
+.plan li{display:flex;align-items:baseline;gap:12px;padding:13px 0;border-top:1px solid rgba(13,33,74,.14)}
+.plan.hi li{border-color:rgba(255,255,255,.18)}
+.plan li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--blue);margin:0;font-size:0;transform:translateY(-1px)}
+.plan .card-link{display:flex;justify-content:space-between;align-items:center;width:100%}
+/* entrada dos planos */
+.plan{--d:0s}
+@media(min-width:901px){.plan:nth-child(2){--d:.15s}.plan:nth-child(3){--d:.3s}}
+@keyframes pin1{from{opacity:0;transform:translateX(-80px) rotate(-5deg)}}
+@keyframes pin2{from{opacity:0;transform:translateY(100px) scale(.9);clip-path:inset(38% 0 0 0 round 28px)}to{clip-path:inset(0 round 28px)}}
+@keyframes pin3{from{opacity:0;transform:translateX(80px) rotate(5deg)}}
+@keyframes pli{from{opacity:0;transform:translateX(-14px)}}
+@media(prefers-reduced-motion:no-preference){
+.js .plan:not(.in){opacity:0}.js .plan:not(.in) .pa i{animation-play-state:paused}
+.plan.in{animation:pin1 1s var(--d) cubic-bezier(.2,.9,.15,1) backwards}
+.plan.in:nth-child(2){animation-name:pin2}.plan.in:nth-child(3){animation-name:pin3}
+.plan.in li{animation:pli .6s calc(var(--d) + .55s) cubic-bezier(.2,.9,.15,1) backwards}
+.plan.in li:nth-child(2){animation-delay:calc(var(--d) + .67s)}.plan.in li:nth-child(3){animation-delay:calc(var(--d) + .79s)}}
+
+/* entrada das dúvidas */
+@keyframes fqin{from{opacity:0;transform:translateX(-80px);clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+@media(prefers-reduced-motion:no-preference){
+.js .fq details:not(.in){opacity:0}
+.fq details.in{animation:fqin .9s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards}}
+
+/* entradas restantes */
+@keyframes soft{from{opacity:0;transform:translateY(28px);filter:blur(6px)}}
+@keyframes rise{from{opacity:0;transform:translateY(46px)}}
+@keyframes lift{from{opacity:0;transform:translateY(60%);clip-path:inset(100% 0 0 0)}to{clip-path:inset(-10% 0)}}
+@keyframes wipeR{from{opacity:0;clip-path:inset(0 0 0 100%)}}
+@keyframes inR{from{opacity:0;transform:translateX(50px)}}
+@keyframes inL{from{opacity:0;transform:translateX(-30px)}}
+@keyframes npop{from{opacity:0;transform:scale(.3) rotate(-30deg)}}
+@keyframes panel{from{opacity:0;transform:translateY(60px) scale(.95)}}
+.n{transform-origin:left center}
+@media(prefers-reduced-motion:no-preference){
+.js :is(.sub,.sub2,.big,.sob p:not(.big),.facts,.facts div,.cols>div,.h3s,.ci li,form.panel,footer>div,footer>span,.sec>.cta):not(.in){opacity:0}
+.sub.in,.sub2.in,.sob p.in,.sec>.cta.in,footer>.in{animation:soft .9s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards}
+.big.in,.h3s.in{animation:lift 1s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards}
+.cols>div.in{animation:rise .9s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards}
+.cols.c4>div.in .n{animation:npop .8s calc(var(--d,0s) + .25s) cubic-bezier(.2,.9,.15,1) backwards}
+.facts.in{animation:wipeR 1s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards}
+.facts div.in{animation:inR .8s calc(var(--d,0s) + .3s) cubic-bezier(.2,.9,.15,1) backwards}
+.ci li.in{animation:inL .7s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards}
+form.panel.in{animation:panel 1s var(--d,0s) cubic-bezier(.2,.9,.15,1) backwards}}
+
+/* entradas em 3D */
+@keyframes soft{from{opacity:0;transform:perspective(800px) rotateX(-55deg) translateY(20px)}}
+@keyframes rise{from{opacity:0;transform:perspective(900px) translateY(70px) rotateX(-40deg)}}
+@keyframes lift{from{opacity:0;transform:perspective(900px) translateY(40%) rotateX(-85deg)}}
+@keyframes wipeR{from{opacity:0;transform:perspective(1100px) translateX(80px) rotateY(60deg)}}
+@keyframes inR{from{opacity:0;transform:perspective(800px) translateX(60px) rotateY(55deg)}}
+@keyframes inL{from{opacity:0;transform:perspective(800px) translateX(-40px) rotateY(-55deg)}}
+@keyframes npop{from{opacity:0;transform:perspective(500px) rotateY(180deg) scale(.4)}}
+@keyframes panel{from{opacity:0;transform:perspective(1200px) translateY(90px) rotateX(-28deg) scale(.94)}}
+@keyframes pin1{from{opacity:0;transform:perspective(1000px) translateX(-130px) rotateY(60deg);transform-origin:0 50%}}
+@keyframes pin2{from{opacity:0;transform:perspective(1000px) translateY(130px) rotateX(-65deg) scale(.92);transform-origin:50% 100%}}
+@keyframes pin3{from{opacity:0;transform:perspective(1000px) translateX(130px) rotateY(-60deg);transform-origin:100% 50%}}
+@keyframes fqin{from{opacity:0;transform:perspective(900px) translateX(-90px) rotateY(-55deg);transform-origin:0 50%}}
+@keyframes pli{from{opacity:0;transform:perspective(600px) translateX(-16px) rotateY(-50deg)}}
+.big,.h3s,.cols>div,form.panel{transform-origin:50% 100%}
+.sub,.sub2,.sob p,.sec>.cta,footer>div,footer>span{transform-origin:50% 0}
+.facts,.facts div{transform-origin:100% 50%}.ci li,.fq details,.plan li{transform-origin:0 50%}
 </style>
 </head>
 <body>
 <div class="bar" id="bar"></div>
 <header id="hd">
 <a href="#inicio" aria-label="Guidsn, início"><svg class="logo" viewBox="0 0 1147.12 278.43" xml:space="preserve" role="img" aria-label="Guidsn - Soluções visuais para sua marca!" xmlns="http://www.w3.org/2000/svg"><g id="Camada_x0020_1"><g id="_2066544030960"><path class="fil0" d="M101.26 174.72c-49.61,18.97 -101.26,13.42 -101.26,13.42 20.66,-17.94 67.84,-73.72 96.3,-107.5 39.96,-47.44 81.14,-87.7 146.4,-79.59 38.89,4.83 66.58,40.27 66.58,40.27 0,0 -68.63,-6.37 -111.24,33.87 -42.61,40.24 -47.17,80.55 -96.78,99.52z"/><g><path class="fil0" d="M23.07 220.29c131.95,10.33 177.85,-1.04 214.57,-68.56 21.41,19.33 30.31,48.14 23.58,67.98 -6.73,19.84 -23,32.83 -43.26,45.88 -50.34,32.41 -162.37,-1.7 -194.89,-45.3z"/><path class="fil1" d="M285.35 160.37c-16.22,-29.74 -36.09,-44.42 -59.62,-44.05 9.44,-10.63 20.24,-16.52 32.4,-17.66 64.76,-0.25 95.7,-0.37 92.84,-0.36 16.56,5.87 19.78,20.8 9.65,44.78 -4.84,8.62 -13.09,18.33 -24.76,29.13 -31.13,33.98 -46.69,50.97 -46.69,50.97 5.53,-26.33 4.26,-47.27 -3.82,-62.8z"/></g></g><g id="_2066544029232"><path class="fil2" d="M991.27 187.69l0 -118.18 27.39 0 0 50.68 -1.94 0c0,-12.08 1.55,-22.14 4.64,-30.19 3.09,-8.05 7.8,-14.09 14.12,-18.12 6.33,-4.03 14.02,-6.04 23.08,-6.04l1.51 0c13.8,0 24.33,4.49 31.6,13.48 7.26,8.98 10.89,22.61 10.89,40.87l0 67.5 -34.51 0 0 -69.44c0,-6.33 -1.87,-11.5 -5.61,-15.53 -3.74,-4.03 -8.77,-6.04 -15.1,-6.04 -6.47,0 -11.68,2.05 -15.63,6.15 -3.96,4.1 -5.93,9.45 -5.93,16.07l0 68.8 -34.51 0zm-55.73 3.67c-16.82,0 -29.98,-3.45 -39.47,-10.35 -9.49,-6.9 -14.52,-16.61 -15.1,-29.11l30.63 0c0.57,3.74 2.84,7.08 6.79,10.03 3.96,2.95 9.89,4.42 17.79,4.42 6.04,0 11.03,-1.04 14.99,-3.13 3.95,-2.08 5.93,-5.07 5.93,-8.95 0,-3.45 -1.51,-6.22 -4.53,-8.3 -3.02,-2.08 -8.41,-3.56 -16.18,-4.42l-9.27 -0.86c-14.23,-1.44 -24.91,-5.39 -32.02,-11.86 -7.12,-6.47 -10.68,-14.74 -10.68,-24.8 0,-8.34 2.08,-15.31 6.25,-20.92 4.17,-5.61 9.96,-9.85 17.36,-12.73 7.41,-2.87 15.85,-4.31 25.34,-4.31 15.24,0 27.53,3.34 36.88,10.03 9.35,6.69 14.24,16.35 14.67,29.01l-30.62 0c-0.58,-3.88 -2.59,-7.15 -6.04,-9.81 -3.45,-2.66 -8.55,-3.99 -15.31,-3.99 -5.32,0 -9.56,1.01 -12.72,3.02 -3.16,2.01 -4.75,4.75 -4.75,8.2 0,3.31 1.37,5.82 4.1,7.55 2.73,1.73 7.19,2.95 13.37,3.67l9.27 0.86c14.52,1.58 25.81,5.61 33.86,12.08 8.05,6.47 12.08,15.17 12.08,26.09 0,7.91 -2.16,14.77 -6.47,20.6 -4.31,5.82 -10.42,10.28 -18.33,13.37 -7.91,3.09 -17.18,4.64 -27.82,4.64zm-119.78 -28.68c5.32,0 10.17,-1.19 14.56,-3.56 4.38,-2.37 7.91,-5.86 10.57,-10.46 2.66,-4.6 3.99,-10.14 3.99,-16.61l0 -7.98c0,-6.33 -1.37,-11.65 -4.1,-15.96 -2.73,-4.31 -6.33,-7.62 -10.78,-9.92 -4.46,-2.3 -9.27,-3.45 -14.45,-3.45 -5.75,0 -10.89,1.47 -15.42,4.42 -4.53,2.95 -8.09,6.97 -10.68,12.08 -2.59,5.1 -3.88,11.03 -3.88,17.79 0,6.9 1.3,12.87 3.88,17.9 2.59,5.03 6.18,8.91 10.79,11.65 4.6,2.73 9.77,4.1 15.53,4.1zm-8.63 28.9c-8.34,0 -15.92,-1.51 -22.75,-4.53 -6.83,-3.02 -12.76,-7.22 -17.79,-12.62 -5.03,-5.39 -8.88,-11.75 -11.54,-19.09 -2.66,-7.33 -3.99,-15.24 -3.99,-23.72l0 -4.96c0,-8.48 1.26,-16.39 3.77,-23.72 2.52,-7.33 6.18,-13.77 11,-19.3 4.82,-5.54 10.6,-9.85 17.36,-12.94 6.76,-3.09 14.31,-4.64 22.64,-4.64 9.49,0 17.68,2.05 24.59,6.15 6.9,4.1 12.29,10.14 16.17,18.11 3.88,7.98 6.04,17.79 6.47,29.44l-9.06 -8.41 0 -81.09 34.72 0 0 157.44 -27.39 0 0 -48.96 4.75 0c-0.43,11.21 -2.77,20.78 -7.01,28.69 -4.24,7.91 -9.96,13.91 -17.15,18.01 -7.19,4.1 -15.46,6.15 -24.8,6.15z"/><path class="fil3" d="M727.06 55.27c-5.18,0 -9.02,-1.37 -11.54,-4.1 -2.52,-2.73 -3.77,-6.25 -3.77,-10.57 0,-4.17 1.26,-7.66 3.77,-10.46 2.52,-2.8 6.36,-4.21 11.54,-4.21 5.32,0 9.24,1.4 11.75,4.21 2.52,2.8 3.77,6.29 3.77,10.46 0,4.31 -1.26,7.84 -3.77,10.57 -2.52,2.73 -6.44,4.1 -11.75,4.1z"/><polygon class="fil3" points="701.82,90.85 701.82,71.45 744.09,71.45 744.09,90.85 "/><polygon class="fil3" points="718.86,187.69 718.86,71.45 744.09,71.45 744.09,187.69 "/><path class="fil3" d="M636.84 191.14c-13.66,0 -24.15,-4.42 -31.49,-13.26 -7.33,-8.84 -11,-21.89 -11,-39.14l0 -67.29 25.23 0 0 70.74c0,8.05 2.23,14.41 6.69,19.09 4.46,4.67 10.5,7.01 18.12,7.01 7.76,0 14.13,-2.48 19.09,-7.44 4.96,-4.96 7.44,-11.75 7.44,-20.38l0 -69.01 25.23 0 0 116.24 -20.06 0 0 -49.6 2.59 0c0,11.65 -1.55,21.39 -4.64,29.22 -3.09,7.84 -7.62,13.77 -13.59,17.79 -5.97,4.03 -13.48,6.04 -22.54,6.04l-1.08 0z"/><polygon class="fil3" points="506.95,129.68 506.95,109.4 592.14,109.4 592.14,129.68 "/><path class="fil3" d="M512.34 191.57c-12.94,0 -24.44,-2.12 -34.51,-6.36 -10.06,-4.24 -18.62,-10.1 -25.66,-17.58 -7.04,-7.48 -12.4,-16.17 -16.07,-26.09 -3.67,-9.92 -5.5,-20.42 -5.5,-31.49l0 -4.75c0,-9.92 1.73,-19.62 5.18,-29.11 3.45,-9.49 8.52,-18.04 15.2,-25.66 6.69,-7.62 14.88,-13.66 24.59,-18.12 9.7,-4.46 20.81,-6.69 33.32,-6.69 13.37,0 25.3,2.55 35.8,7.66 10.5,5.1 18.91,12.15 25.23,21.14 6.33,8.99 9.99,19.38 11,31.16l-26.31 0c-0.86,-7.76 -3.49,-14.31 -7.87,-19.63 -4.38,-5.32 -9.85,-9.38 -16.39,-12.19 -6.54,-2.8 -13.69,-4.2 -21.46,-4.2 -7.76,0 -14.84,1.4 -21.24,4.2 -6.4,2.8 -11.9,6.76 -16.5,11.86 -4.6,5.1 -8.12,11.22 -10.57,18.33 -2.45,7.12 -3.67,15.06 -3.67,23.83 0,9.78 1.33,18.41 3.99,25.88 2.66,7.48 6.44,13.77 11.32,18.87 4.89,5.1 10.75,8.99 17.58,11.65 6.83,2.66 14.34,3.99 22.54,3.99 11.36,0 21.31,-2.34 29.87,-7.01 8.55,-4.67 14.99,-10.75 19.3,-18.22l-6.69 25.23 0 -43.78 24.15 0 0 36.23c-7.04,9.77 -16.21,17.36 -27.5,22.75 -11.29,5.39 -24.33,8.09 -39.14,8.09z"/><text x="1113.42" y="90.78"  class="fil0 fnt0">TM</text><text x="635.57" y="244.43"  class="fil0 fnt1" textLength="243.73" lengthAdjust="spacingAndGlyphs">Soluções visuais</text><text x="1004.43" y="244.43"  class="fil0 fnt1" textLength="114.3" lengthAdjust="spacingAndGlyphs"> marca!</text><text x="879.3" y="244.43"  class="fil0 fnt2"></text><text x="884.61" y="244.43"  class="fil0 fnt3" textLength="113" lengthAdjust="spacingAndGlyphs">para sua</text></g></g></svg></a>
-<nav id="nav" aria-label="Principal"><a href="#inicio" class="on">Início</a><a href="#projetos">Serviços</a><a href="#contato">Contato</a><span class="ind" id="ind"></span></nav>
+<nav id="nav" aria-label="Principal"><a href="#inicio" class="on">Início</a><a href="#sobre">Sobre</a><a href="#projetos">Serviços</a><a href="#processo">Processo</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a><span class="ind" id="ind"></span></nav><button class="mb" id="mb" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
 </header>
 <main>
 <section id="inicio">
@@ -304,6 +470,16 @@ header > a { flex: 0 1 auto; min-width: 0; }
 </div>
 </section>
 
+<section id="sobre" class="sec">
+<h2 class="scrub">Sobre</h2>
+<div class="sob"><div><p class="big">A Guidsn nasceu para dar a marcas de qualquer tamanho uma <b>comunicação visual clara, consistente e com personalidade</b>, do logotipo ao vídeo final.</p>
+<p>Trabalho com design gráfico, edição de vídeos e motion design no mesmo fluxo. Isso significa uma única conversa, um único padrão visual e entregas que conversam entre si, seja no feed, na tela ou no papel.</p>
+<p>Cada projeto começa ouvindo o seu objetivo e termina com arquivos prontos para publicar, sem retrabalho e sem surpresas no prazo.</p>
+</div>
+<dl class="facts"><div><dt>Design gráfico</dt><dd>Marcas e impressos</dd></div><div><dt>Edições de vídeos</dt><dd>Reels e institucionais</dd></div><div><dt>Motion design</dt><dd>Animações e vinhetas</dd></div><div><dt>Atendimento</dt><dd>Online, todo o Brasil</dd></div></dl></div>
+<div class="cols"><div><h4>Visão integrada</h4><p>Design, vídeo e motion pensados juntos mantêm a marca coerente em todos os pontos de contato.</p></div><div><h4>Prazo combinado</h4><p>Cronograma definido na proposta e atualizações a cada etapa, sem deixar você no escuro.</p></div><div><h4>Conversa direta</h4><p>Você fala diretamente com quem cria. Menos ruído, ajustes mais rápidos e decisões mais claras.</p></div></div>
+</section>
+
 <section id="projetos" class="sec">
 <h2 class="scrub" id="scrub">Serviços</h2>
 <p class="sub">Estratégia visual e criatividade em cada formato para sua marca se apresentar com personalidade e profissionalismo.</p>
@@ -312,21 +488,43 @@ header > a { flex: 0 1 auto; min-width: 0; }
 <article class="card c2" style="--n:1"><div class="tx"><div class="tags"><span>Edição de vídeos</span><span>Destaque para marcas</span></div><div><h3>Edições de Vídeos</h3><p>Ritmo, narrativa e acabamento para transformar suas gravações em vídeos que capturam a atenção e valorizam sua mensagem.</p><a class="card-link" href="#" data-portfolio-pending="true" aria-label="Conferir portfólio — página em breve">Conferir portfólio! <span aria-hidden="true">↗</span></a></div></div><div class="art a2" aria-hidden="true"><i class="pl"></i><i class="t t1"></i><i class="t t2"></i><i class="t t3"></i><i class="ph"></i></div></article>
 <article class="card c3" style="--n:2"><div class="tx"><div class="tags"><span>Motion design</span><span>Soluções visuais</span></div><div><h3>Motion Design</h3><p>Animações que dão vida às suas ideias, simplificam mensagens e deixam sua comunicação muito mais expressiva.</p><a class="card-link" href="#" data-portfolio-pending="true" aria-label="Conferir portfólio — página em breve">Conferir portfólio! <span aria-hidden="true">↗</span></a></div></div><div class="art a3" aria-hidden="true"><svg viewBox="0 0 200 100" preserveAspectRatio="none"><path d="M0 92C50 92 60 8 100 8S150 92 200 92"/></svg><i class="b"></i><i class="sh"></i></div></article>
 </div>
+<h3 class="h3s">O que está incluso</h3>
+<div class="cols"><div><h4>Designer gráfico</h4><ul><li>Identidade visual e logotipo</li><li>Posts e artes para redes sociais</li><li>Cartões, folders e catálogos</li><li>Apresentações comerciais</li></ul></div><div><h4>Edições de vídeos</h4><ul><li>Reels, Shorts e TikTok</li><li>Vídeos institucionais e anúncios</li><li>Cortes, legendas e correção de cor</li><li>Trilha e design de som</li></ul></div><div><h4>Motion design</h4><ul><li>Animação de logotipo</li><li>Vinhetas e intros</li><li>Infográficos animados</li><li>Stories e anúncios animados</li></ul></div></div>
+</section>
+
+<section id="processo" class="sec g">
+<h2 class="scrub">Processo</h2>
+<p class="sub">Um caminho simples e transparente, para você saber o que acontece em cada etapa e quando recebe cada entrega.</p>
+<div class="cols c4"><div><span class="n">1</span><h4>Briefing</h4><p>Conversamos sobre objetivos, público e referências. Você recebe escopo, prazo e proposta claros.</p></div><div><span class="n">2</span><h4>Conceito</h4><p>Pesquisa visual e primeiras direções: paleta, tipografia, roteiro ou storyboard para aprovação.</p></div><div><span class="n">3</span><h4>Produção</h4><p>Criação das peças, edição ou animação, com rodadas de ajustes combinadas para refinar os detalhes.</p></div><div><span class="n">4</span><h4>Entrega</h4><p>Arquivos finais organizados para web, redes e impressão, com suporte depois da entrega.</p></div></div>
+<h3 class="h3s">Formas de trabalhar</h3>
+<div class="plans"><div class="plan"><h4>Projeto avulso</h4><p>Para uma necessidade específica, com início, meio e fim.</p><ul><li>Escopo e prazo fechados</li><li>Ideal para logotipo, vídeo ou animação pontual</li><li>Pagamento combinado em etapas</li></ul><a class="card-link" href="#contato">Pedir orçamento <span aria-hidden="true">↗</span></a></div><div class="plan hi"><h4>Pacote mensal</h4><p>Para marcas que precisam publicar com constância.</p><ul><li>Volume mensal de posts, vídeos ou motions</li><li>Calendário e prioridades alinhados</li><li>Prazos de entrega recorrentes</li></ul><a class="card-link" href="#contato">Pedir orçamento <span aria-hidden="true">↗</span></a></div><div class="plan"><h4>Parceria contínua</h4><p>Para quem quer um parceiro visual de longo prazo.</p><ul><li>Atendimento prioritário</li><li>Evolução da identidade e dos formatos</li><li>Revisão periódica de resultados</li></ul><a class="card-link" href="#contato">Pedir orçamento <span aria-hidden="true">↗</span></a></div></div>
+</section>
+
+<section id="faq" class="sec g">
+<h2 class="scrub">Dúvidas</h2>
+<p class="sub">O que costuma surgir antes de começar um projeto. Se a sua não estiver aqui, é só chamar.</p>
+<div class="fq"><details><summary>Quais serviços você oferece?</summary><p>Design gráfico, edição de vídeos e motion design. Posso atuar em uma frente só ou combinar as três para manter sua marca coerente em todos os formatos.</p></details><details><summary>Qual é o prazo médio de um projeto?</summary><p>Posts e cortes de vídeo costumam sair em poucos dias; identidades visuais e animações levam algumas semanas. O prazo exato é fechado na proposta.</p></details><details><summary>Como funciona o orçamento?</summary><p>Você conta o objetivo, o formato e a quantidade de peças pelo formulário ou WhatsApp. Eu respondo com uma proposta clara, sem compromisso.</p></details><details><summary>Quantas revisões estão incluídas?</summary><p>Cada proposta inclui rodadas de ajustes, normalmente duas, para refinar o resultado. Mudanças maiores de escopo são combinadas antes.</p></details><details><summary>Quais arquivos recebo na entrega?</summary><p>Arquivos finais prontos para uso, como PNG, JPG, PDF e MP4. Arquivos editáveis podem ser incluídos quando combinado na proposta.</p></details><details><summary>Atende marcas de outras cidades?</summary><p>Sim. O atendimento é 100% online, por WhatsApp e videochamada, para marcas de todo o Brasil.</p></details></div>
+<a class="cta mag" href="#contato">Tirar outra dúvida</a>
 </section>
 
 <section id="contato" class="sec ct">
-<div class="ct-grid"><div><h2 class="rv" id="h2c" aria-label="Vamos dar o próximo passo com a sua marca?">Sua próxima grande ideia começa <span class="hl">aqui.</span></h2><p class="sub2">Compartilhe seu objetivo. Vamos encontrar juntos a melhor forma de transformar sua ideia em uma comunicação visual forte e consistente.</p></div>
+<div class="ct-grid"><div><h2 class="rv" id="h2c" aria-label="Vamos dar o próximo passo com a sua marca?">Sua próxima grande ideia começa <span class="hl">aqui.</span></h2><p class="sub2">Compartilhe seu objetivo. Vamos encontrar juntos a melhor forma de transformar sua ideia em uma comunicação visual forte e consistente.</p><ul class="ci"><li>Resposta em até 24 horas úteis</li><li>Atendimento online para todo o Brasil</li><li>Orçamento sem compromisso</li></ul></div>
 <form id="form" class="panel">
 <div class="f"><input id="n" required placeholder=" " autocomplete="name"><label for="n">Nome</label></div>
 <div class="f"><select id="o" required><option value="" disabled selected hidden></option><option value="Instagram">Instagram</option><option value="Google">Google</option><option value="Indicação">Indicação</option><option value="Behance / Portfólio">Behance / Portfólio</option><option value="Outro">Outro</option></select><label for="o">Onde nos conheceu</label></div>
-<div class="f full"><textarea id="m" required placeholder=" "></textarea><label for="m">Conte um pouco sobre sua ideia.</label></div>
+<div class="f sv"><select id="sv" required><option value="" disabled selected hidden></option><option>Designer gráfico</option><option>Edições de vídeos</option><option>Motion design</option><option>Mais de um serviço</option><option>Ainda não sei</option></select><label for="sv">Serviço de interesse</label></div>
+<div class="f full"><textarea id="m" required placeholder=" "></textarea><label for="m">Fale mais sobre o seu projeto</label></div>
 <button class="cta send mag" type="submit">Enviar mensagem no WhatsApp</button>
 <p id="st" role="status"></p>
 </form></div>
 
 </section>
 </main>
-<footer><svg class="logo" viewBox="0 0 1147.12 278.43" xml:space="preserve" role="img" aria-label="Guidsn - Soluções visuais para sua marca!" xmlns="http://www.w3.org/2000/svg"><g><g><path class="fil0" d="M101.26 174.72c-49.61,18.97 -101.26,13.42 -101.26,13.42 20.66,-17.94 67.84,-73.72 96.3,-107.5 39.96,-47.44 81.14,-87.7 146.4,-79.59 38.89,4.83 66.58,40.27 66.58,40.27 0,0 -68.63,-6.37 -111.24,33.87 -42.61,40.24 -47.17,80.55 -96.78,99.52z"/><g><path class="fil0" d="M23.07 220.29c131.95,10.33 177.85,-1.04 214.57,-68.56 21.41,19.33 30.31,48.14 23.58,67.98 -6.73,19.84 -23,32.83 -43.26,45.88 -50.34,32.41 -162.37,-1.7 -194.89,-45.3z"/><path class="fil1" d="M285.35 160.37c-16.22,-29.74 -36.09,-44.42 -59.62,-44.05 9.44,-10.63 20.24,-16.52 32.4,-17.66 64.76,-0.25 95.7,-0.37 92.84,-0.36 16.56,5.87 19.78,20.8 9.65,44.78 -4.84,8.62 -13.09,18.33 -24.76,29.13 -31.13,33.98 -46.69,50.97 -46.69,50.97 5.53,-26.33 4.26,-47.27 -3.82,-62.8z"/></g></g><g><path class="fil2" d="M991.27 187.69l0 -118.18 27.39 0 0 50.68 -1.94 0c0,-12.08 1.55,-22.14 4.64,-30.19 3.09,-8.05 7.8,-14.09 14.12,-18.12 6.33,-4.03 14.02,-6.04 23.08,-6.04l1.51 0c13.8,0 24.33,4.49 31.6,13.48 7.26,8.98 10.89,22.61 10.89,40.87l0 67.5 -34.51 0 0 -69.44c0,-6.33 -1.87,-11.5 -5.61,-15.53 -3.74,-4.03 -8.77,-6.04 -15.1,-6.04 -6.47,0 -11.68,2.05 -15.63,6.15 -3.96,4.1 -5.93,9.45 -5.93,16.07l0 68.8 -34.51 0zm-55.73 3.67c-16.82,0 -29.98,-3.45 -39.47,-10.35 -9.49,-6.9 -14.52,-16.61 -15.1,-29.11l30.63 0c0.57,3.74 2.84,7.08 6.79,10.03 3.96,2.95 9.89,4.42 17.79,4.42 6.04,0 11.03,-1.04 14.99,-3.13 3.95,-2.08 5.93,-5.07 5.93,-8.95 0,-3.45 -1.51,-6.22 -4.53,-8.3 -3.02,-2.08 -8.41,-3.56 -16.18,-4.42l-9.27 -0.86c-14.23,-1.44 -24.91,-5.39 -32.02,-11.86 -7.12,-6.47 -10.68,-14.74 -10.68,-24.8 0,-8.34 2.08,-15.31 6.25,-20.92 4.17,-5.61 9.96,-9.85 17.36,-12.73 7.41,-2.87 15.85,-4.31 25.34,-4.31 15.24,0 27.53,3.34 36.88,10.03 9.35,6.69 14.24,16.35 14.67,29.01l-30.62 0c-0.58,-3.88 -2.59,-7.15 -6.04,-9.81 -3.45,-2.66 -8.55,-3.99 -15.31,-3.99 -5.32,0 -9.56,1.01 -12.72,3.02 -3.16,2.01 -4.75,4.75 -4.75,8.2 0,3.31 1.37,5.82 4.1,7.55 2.73,1.73 7.19,2.95 13.37,3.67l9.27 0.86c14.52,1.58 25.81,5.61 33.86,12.08 8.05,6.47 12.08,15.17 12.08,26.09 0,7.91 -2.16,14.77 -6.47,20.6 -4.31,5.82 -10.42,10.28 -18.33,13.37 -7.91,3.09 -17.18,4.64 -27.82,4.64zm-119.78 -28.68c5.32,0 10.17,-1.19 14.56,-3.56 4.38,-2.37 7.91,-5.86 10.57,-10.46 2.66,-4.6 3.99,-10.14 3.99,-16.61l0 -7.98c0,-6.33 -1.37,-11.65 -4.1,-15.96 -2.73,-4.31 -6.33,-7.62 -10.78,-9.92 -4.46,-2.3 -9.27,-3.45 -14.45,-3.45 -5.75,0 -10.89,1.47 -15.42,4.42 -4.53,2.95 -8.09,6.97 -10.68,12.08 -2.59,5.1 -3.88,11.03 -3.88,17.79 0,6.9 1.3,12.87 3.88,17.9 2.59,5.03 6.18,8.91 10.79,11.65 4.6,2.73 9.77,4.1 15.53,4.1zm-8.63 28.9c-8.34,0 -15.92,-1.51 -22.75,-4.53 -6.83,-3.02 -12.76,-7.22 -17.79,-12.62 -5.03,-5.39 -8.88,-11.75 -11.54,-19.09 -2.66,-7.33 -3.99,-15.24 -3.99,-23.72l0 -4.96c0,-8.48 1.26,-16.39 3.77,-23.72 2.52,-7.33 6.18,-13.77 11,-19.3 4.82,-5.54 10.6,-9.85 17.36,-12.94 6.76,-3.09 14.31,-4.64 22.64,-4.64 9.49,0 17.68,2.05 24.59,6.15 6.9,4.1 12.29,10.14 16.17,18.11 3.88,7.98 6.04,17.79 6.47,29.44l-9.06 -8.41 0 -81.09 34.72 0 0 157.44 -27.39 0 0 -48.96 4.75 0c-0.43,11.21 -2.77,20.78 -7.01,28.69 -4.24,7.91 -9.96,13.91 -17.15,18.01 -7.19,4.1 -15.46,6.15 -24.8,6.15z"/><path class="fil3" d="M727.06 55.27c-5.18,0 -9.02,-1.37 -11.54,-4.1 -2.52,-2.73 -3.77,-6.25 -3.77,-10.57 0,-4.17 1.26,-7.66 3.77,-10.46 2.52,-2.8 6.36,-4.21 11.54,-4.21 5.32,0 9.24,1.4 11.75,4.21 2.52,2.8 3.77,6.29 3.77,10.46 0,4.31 -1.26,7.84 -3.77,10.57 -2.52,2.73 -6.44,4.1 -11.75,4.1z"/><polygon class="fil3" points="701.82,90.85 701.82,71.45 744.09,71.45 744.09,90.85 "/><polygon class="fil3" points="718.86,187.69 718.86,71.45 744.09,71.45 744.09,187.69 "/><path class="fil3" d="M636.84 191.14c-13.66,0 -24.15,-4.42 -31.49,-13.26 -7.33,-8.84 -11,-21.89 -11,-39.14l0 -67.29 25.23 0 0 70.74c0,8.05 2.23,14.41 6.69,19.09 4.46,4.67 10.5,7.01 18.12,7.01 7.76,0 14.13,-2.48 19.09,-7.44 4.96,-4.96 7.44,-11.75 7.44,-20.38l0 -69.01 25.23 0 0 116.24 -20.06 0 0 -49.6 2.59 0c0,11.65 -1.55,21.39 -4.64,29.22 -3.09,7.84 -7.62,13.77 -13.59,17.79 -5.97,4.03 -13.48,6.04 -22.54,6.04l-1.08 0z"/><polygon class="fil3" points="506.95,129.68 506.95,109.4 592.14,109.4 592.14,129.68 "/><path class="fil3" d="M512.34 191.57c-12.94,0 -24.44,-2.12 -34.51,-6.36 -10.06,-4.24 -18.62,-10.1 -25.66,-17.58 -7.04,-7.48 -12.4,-16.17 -16.07,-26.09 -3.67,-9.92 -5.5,-20.42 -5.5,-31.49l0 -4.75c0,-9.92 1.73,-19.62 5.18,-29.11 3.45,-9.49 8.52,-18.04 15.2,-25.66 6.69,-7.62 14.88,-13.66 24.59,-18.12 9.7,-4.46 20.81,-6.69 33.32,-6.69 13.37,0 25.3,2.55 35.8,7.66 10.5,5.1 18.91,12.15 25.23,21.14 6.33,8.99 9.99,19.38 11,31.16l-26.31 0c-0.86,-7.76 -3.49,-14.31 -7.87,-19.63 -4.38,-5.32 -9.85,-9.38 -16.39,-12.19 -6.54,-2.8 -13.69,-4.2 -21.46,-4.2 -7.76,0 -14.84,1.4 -21.24,4.2 -6.4,2.8 -11.9,6.76 -16.5,11.86 -4.6,5.1 -8.12,11.22 -10.57,18.33 -2.45,7.12 -3.67,15.06 -3.67,23.83 0,9.78 1.33,18.41 3.99,25.88 2.66,7.48 6.44,13.77 11.32,18.87 4.89,5.1 10.75,8.99 17.58,11.65 6.83,2.66 14.34,3.99 22.54,3.99 11.36,0 21.31,-2.34 29.87,-7.01 8.55,-4.67 14.99,-10.75 19.3,-18.22l-6.69 25.23 0 -43.78 24.15 0 0 36.23c-7.04,9.77 -16.21,17.36 -27.5,22.75 -11.29,5.39 -24.33,8.09 -39.14,8.09z"/><text x="1113.42" y="90.78"  class="fil0 fnt0">TM</text><text x="635.57" y="244.43"  class="fil0 fnt1" textLength="243.73" lengthAdjust="spacingAndGlyphs">Soluções visuais</text><text x="1004.43" y="244.43"  class="fil0 fnt1" textLength="114.3" lengthAdjust="spacingAndGlyphs"> marca!</text><text x="879.3" y="244.43"  class="fil0 fnt2"></text><text x="884.61" y="244.43"  class="fil0 fnt3" textLength="113" lengthAdjust="spacingAndGlyphs">para sua</text></g></g></svg><nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#projetos">Serviços</a><a href="#contato">Contato</a></nav><span>© 2026 Guidsn</span></footer>
+<footer><div><svg class="logo" viewBox="0 0 1147.12 278.43" xml:space="preserve" role="img" aria-label="Guidsn - Soluções visuais para sua marca!" xmlns="http://www.w3.org/2000/svg"><g><g><path class="fil0" d="M101.26 174.72c-49.61,18.97 -101.26,13.42 -101.26,13.42 20.66,-17.94 67.84,-73.72 96.3,-107.5 39.96,-47.44 81.14,-87.7 146.4,-79.59 38.89,4.83 66.58,40.27 66.58,40.27 0,0 -68.63,-6.37 -111.24,33.87 -42.61,40.24 -47.17,80.55 -96.78,99.52z"/><g><path class="fil0" d="M23.07 220.29c131.95,10.33 177.85,-1.04 214.57,-68.56 21.41,19.33 30.31,48.14 23.58,67.98 -6.73,19.84 -23,32.83 -43.26,45.88 -50.34,32.41 -162.37,-1.7 -194.89,-45.3z"/><path class="fil1" d="M285.35 160.37c-16.22,-29.74 -36.09,-44.42 -59.62,-44.05 9.44,-10.63 20.24,-16.52 32.4,-17.66 64.76,-0.25 95.7,-0.37 92.84,-0.36 16.56,5.87 19.78,20.8 9.65,44.78 -4.84,8.62 -13.09,18.33 -24.76,29.13 -31.13,33.98 -46.69,50.97 -46.69,50.97 5.53,-26.33 4.26,-47.27 -3.82,-62.8z"/></g></g><g><path class="fil2" d="M991.27 187.69l0 -118.18 27.39 0 0 50.68 -1.94 0c0,-12.08 1.55,-22.14 4.64,-30.19 3.09,-8.05 7.8,-14.09 14.12,-18.12 6.33,-4.03 14.02,-6.04 23.08,-6.04l1.51 0c13.8,0 24.33,4.49 31.6,13.48 7.26,8.98 10.89,22.61 10.89,40.87l0 67.5 -34.51 0 0 -69.44c0,-6.33 -1.87,-11.5 -5.61,-15.53 -3.74,-4.03 -8.77,-6.04 -15.1,-6.04 -6.47,0 -11.68,2.05 -15.63,6.15 -3.96,4.1 -5.93,9.45 -5.93,16.07l0 68.8 -34.51 0zm-55.73 3.67c-16.82,0 -29.98,-3.45 -39.47,-10.35 -9.49,-6.9 -14.52,-16.61 -15.1,-29.11l30.63 0c0.57,3.74 2.84,7.08 6.79,10.03 3.96,2.95 9.89,4.42 17.79,4.42 6.04,0 11.03,-1.04 14.99,-3.13 3.95,-2.08 5.93,-5.07 5.93,-8.95 0,-3.45 -1.51,-6.22 -4.53,-8.3 -3.02,-2.08 -8.41,-3.56 -16.18,-4.42l-9.27 -0.86c-14.23,-1.44 -24.91,-5.39 -32.02,-11.86 -7.12,-6.47 -10.68,-14.74 -10.68,-24.8 0,-8.34 2.08,-15.31 6.25,-20.92 4.17,-5.61 9.96,-9.85 17.36,-12.73 7.41,-2.87 15.85,-4.31 25.34,-4.31 15.24,0 27.53,3.34 36.88,10.03 9.35,6.69 14.24,16.35 14.67,29.01l-30.62 0c-0.58,-3.88 -2.59,-7.15 -6.04,-9.81 -3.45,-2.66 -8.55,-3.99 -15.31,-3.99 -5.32,0 -9.56,1.01 -12.72,3.02 -3.16,2.01 -4.75,4.75 -4.75,8.2 0,3.31 1.37,5.82 4.1,7.55 2.73,1.73 7.19,2.95 13.37,3.67l9.27 0.86c14.52,1.58 25.81,5.61 33.86,12.08 8.05,6.47 12.08,15.17 12.08,26.09 0,7.91 -2.16,14.77 -6.47,20.6 -4.31,5.82 -10.42,10.28 -18.33,13.37 -7.91,3.09 -17.18,4.64 -27.82,4.64zm-119.78 -28.68c5.32,0 10.17,-1.19 14.56,-3.56 4.38,-2.37 7.91,-5.86 10.57,-10.46 2.66,-4.6 3.99,-10.14 3.99,-16.61l0 -7.98c0,-6.33 -1.37,-11.65 -4.1,-15.96 -2.73,-4.31 -6.33,-7.62 -10.78,-9.92 -4.46,-2.3 -9.27,-3.45 -14.45,-3.45 -5.75,0 -10.89,1.47 -15.42,4.42 -4.53,2.95 -8.09,6.97 -10.68,12.08 -2.59,5.1 -3.88,11.03 -3.88,17.79 0,6.9 1.3,12.87 3.88,17.9 2.59,5.03 6.18,8.91 10.79,11.65 4.6,2.73 9.77,4.1 15.53,4.1zm-8.63 28.9c-8.34,0 -15.92,-1.51 -22.75,-4.53 -6.83,-3.02 -12.76,-7.22 -17.79,-12.62 -5.03,-5.39 -8.88,-11.75 -11.54,-19.09 -2.66,-7.33 -3.99,-15.24 -3.99,-23.72l0 -4.96c0,-8.48 1.26,-16.39 3.77,-23.72 2.52,-7.33 6.18,-13.77 11,-19.3 4.82,-5.54 10.6,-9.85 17.36,-12.94 6.76,-3.09 14.31,-4.64 22.64,-4.64 9.49,0 17.68,2.05 24.59,6.15 6.9,4.1 12.29,10.14 16.17,18.11 3.88,7.98 6.04,17.79 6.47,29.44l-9.06 -8.41 0 -81.09 34.72 0 0 157.44 -27.39 0 0 -48.96 4.75 0c-0.43,11.21 -2.77,20.78 -7.01,28.69 -4.24,7.91 -9.96,13.91 -17.15,18.01 -7.19,4.1 -15.46,6.15 -24.8,6.15z"/><path class="fil3" d="M727.06 55.27c-5.18,0 -9.02,-1.37 -11.54,-4.1 -2.52,-2.73 -3.77,-6.25 -3.77,-10.57 0,-4.17 1.26,-7.66 3.77,-10.46 2.52,-2.8 6.36,-4.21 11.54,-4.21 5.32,0 9.24,1.4 11.75,4.21 2.52,2.8 3.77,6.29 3.77,10.46 0,4.31 -1.26,7.84 -3.77,10.57 -2.52,2.73 -6.44,4.1 -11.75,4.1z"/><polygon class="fil3" points="701.82,90.85 701.82,71.45 744.09,71.45 744.09,90.85 "/><polygon class="fil3" points="718.86,187.69 718.86,71.45 744.09,71.45 744.09,187.69 "/><path class="fil3" d="M636.84 191.14c-13.66,0 -24.15,-4.42 -31.49,-13.26 -7.33,-8.84 -11,-21.89 -11,-39.14l0 -67.29 25.23 0 0 70.74c0,8.05 2.23,14.41 6.69,19.09 4.46,4.67 10.5,7.01 18.12,7.01 7.76,0 14.13,-2.48 19.09,-7.44 4.96,-4.96 7.44,-11.75 7.44,-20.38l0 -69.01 25.23 0 0 116.24 -20.06 0 0 -49.6 2.59 0c0,11.65 -1.55,21.39 -4.64,29.22 -3.09,7.84 -7.62,13.77 -13.59,17.79 -5.97,4.03 -13.48,6.04 -22.54,6.04l-1.08 0z"/><polygon class="fil3" points="506.95,129.68 506.95,109.4 592.14,109.4 592.14,129.68 "/><path class="fil3" d="M512.34 191.57c-12.94,0 -24.44,-2.12 -34.51,-6.36 -10.06,-4.24 -18.62,-10.1 -25.66,-17.58 -7.04,-7.48 -12.4,-16.17 -16.07,-26.09 -3.67,-9.92 -5.5,-20.42 -5.5,-31.49l0 -4.75c0,-9.92 1.73,-19.62 5.18,-29.11 3.45,-9.49 8.52,-18.04 15.2,-25.66 6.69,-7.62 14.88,-13.66 24.59,-18.12 9.7,-4.46 20.81,-6.69 33.32,-6.69 13.37,0 25.3,2.55 35.8,7.66 10.5,5.1 18.91,12.15 25.23,21.14 6.33,8.99 9.99,19.38 11,31.16l-26.31 0c-0.86,-7.76 -3.49,-14.31 -7.87,-19.63 -4.38,-5.32 -9.85,-9.38 -16.39,-12.19 -6.54,-2.8 -13.69,-4.2 -21.46,-4.2 -7.76,0 -14.84,1.4 -21.24,4.2 -6.4,2.8 -11.9,6.76 -16.5,11.86 -4.6,5.1 -8.12,11.22 -10.57,18.33 -2.45,7.12 -3.67,15.06 -3.67,23.83 0,9.78 1.33,18.41 3.99,25.88 2.66,7.48 6.44,13.77 11.32,18.87 4.89,5.1 10.75,8.99 17.58,11.65 6.83,2.66 14.34,3.99 22.54,3.99 11.36,0 21.31,-2.34 29.87,-7.01 8.55,-4.67 14.99,-10.75 19.3,-18.22l-6.69 25.23 0 -43.78 24.15 0 0 36.23c-7.04,9.77 -16.21,17.36 -27.5,22.75 -11.29,5.39 -24.33,8.09 -39.14,8.09z"/><text x="1113.42" y="90.78"  class="fil0 fnt0">TM</text><text x="635.57" y="244.43"  class="fil0 fnt1" textLength="243.73" lengthAdjust="spacingAndGlyphs">Soluções visuais</text><text x="1004.43" y="244.43"  class="fil0 fnt1" textLength="114.3" lengthAdjust="spacingAndGlyphs"> marca!</text><text x="879.3" y="244.43"  class="fil0 fnt2"></text><text x="884.61" y="244.43"  class="fil0 fnt3" textLength="113" lengthAdjust="spacingAndGlyphs">para sua</text></g></g></svg></div>
+<div><h4>Navegação</h4><nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#processo">Processo</a><a href="#faq">Dúvidas</a></nav></div>
+<div><h4>Serviços</h4><nav aria-label="Serviços"><a href="#projetos">Designer gráfico</a><a href="#projetos">Edições de vídeos</a><a href="#projetos">Motion design</a></nav></div>
+<div><h4>Contato</h4><nav aria-label="Contato"><a href="https://wa.me/5546933001459" target="_blank" rel="noopener">WhatsApp</a><a href="#contato">Pedir orçamento</a></nav></div>
+<span>© Todos os direitos reservados. - Guilherme Design</span></footer>
 
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],RM=matchMedia('(prefers-reduced-motion:reduce)').matches,EMAIL="";
@@ -351,12 +549,12 @@ if(!RM)requestAnimationFrame(loop)}
 requestAnimationFrame(loop);
 
 
-const hd=$('#hd'),ind=$('#ind'),links=$$('#nav a'),secs=['inicio','projetos','contato'].map(i=>document.getElementById(i)),sc=$('#scrub');
+const hd=$('#hd'),ind=$('#ind'),links=$$('#nav a'),secs=['inicio','sobre','projetos','processo','faq','contato'].map(i=>document.getElementById(i)),scs=$$('.scrub');let lk=-1;const nv=$('#nav');
 function spy(){let k=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.45)k=i});
-links.forEach((a,i)=>a.classList.toggle('on',i===k));const a=links[k];ind.style.width=a.offsetWidth+'px';ind.style.transform=`translateX(${a.offsetLeft}px)`}
+links.forEach((a,i)=>a.classList.toggle('on',i===k));const a=links[k];ind.style.width=a.offsetWidth+'px';ind.style.transform=`translateX(${a.offsetLeft}px)`;if(k!==lk){lk=k;if(nv.scrollWidth>nv.clientWidth+2)nv.scrollTo({left:Math.max(0,a.offsetLeft-24),behavior:RM?'auto':'smooth'})}}
 function onScroll(){const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
 hd.classList.toggle('sm',y>10);stack();$('#bar').style.setProperty('--p',h>0?y/h:0);spy();
-const r=sc.getBoundingClientRect(),p=Math.max(0,Math.min(1,1-(r.top-innerHeight*.15)/(innerHeight*.65)));sc.style.setProperty('--w',Math.round(100+700*p));
+scs.forEach(sc=>{const r=sc.getBoundingClientRect(),p=Math.max(0,Math.min(1,1-(r.top-innerHeight*.15)/(innerHeight*.65)));sc.style.setProperty('--w',Math.round(100+700*p))});
 }
 addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',spy);onScroll();document.fonts&&document.fonts.ready.then(spy);
 
@@ -374,8 +572,8 @@ $$('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{if(RM)return;const r
 document.querySelectorAll('[data-portfolio-pending="true"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
 
 $('#form').addEventListener('submit',e=>{e.preventDefault();const st=$('#st');
-const nome=$('#n').value.trim(),origem=$('#o').value,projeto=$('#m').value.trim();
-const texto=`Olá! Vim pelo site.\n\n*Nome:* ${nome}\n*Onde nos conheceu:* ${origem}\n*Projeto:* ${projeto}`;
+const nome=$('#n').value.trim(),origem=$('#o').value,servico=$('#sv').value,projeto=$('#m').value.trim();
+const texto=`Olá! Vim pelo site.\n\n*Nome:* ${nome}\n*Serviço de interesse:* ${servico}\n*Onde nos conheceu:* ${origem}\n*Projeto:* ${projeto}`;
 const url=`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
 st.textContent='Abrindo o WhatsApp…';
 window.open(url,'_blank','noopener');});
@@ -384,6 +582,14 @@ function stack(){const cs=$$('.card');cs.forEach((c,i)=>{if(c.getBoundingClientR
   
 const ct=$('#contato');ct.addEventListener('pointermove',e=>{const r=ct.getBoundingClientRect();ct.style.setProperty('--gx',e.clientX-r.left+'px');ct.style.setProperty('--gy',e.clientY-r.top+'px')});
 
+const mb=$('#mb'),cl=()=>{hd.classList.remove('op');mb.setAttribute('aria-expanded','false')};
+mb.addEventListener('click',()=>{const o=hd.classList.toggle('op');mb.setAttribute('aria-expanded',o)});
+$$('#nav a').forEach(a=>a.addEventListener('click',cl));addEventListener('keydown',e=>e.key==='Escape'&&cl());addEventListener('resize',()=>innerWidth>900&&cl());
+const pio=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),{threshold:.25});$$('.plan').forEach(p=>pio.observe(p));
+const fio=new IntersectionObserver((es,o)=>es.filter(e=>e.isIntersecting).forEach((e,i)=>{e.target.style.setProperty('--d',i*.09+'s');e.target.classList.add('in');o.unobserve(e.target)}),{threshold:.6,rootMargin:'0px 0px -6% 0px'});$$('.fq details').forEach(d=>fio.observe(d));
+const rio=new IntersectionObserver((es,o)=>es.filter(e=>e.isIntersecting).forEach((e,i)=>{e.target.style.setProperty('--d',i*.12+'s');e.target.classList.add('in');o.unobserve(e.target)}),{threshold:.2,rootMargin:'0px 0px -5% 0px'});
+$$('.sub,.sub2,.big,.sob p:not(.big),.facts,.facts div,.cols>div,.h3s,.ci li,form.panel,footer>div,footer>span,.sec>.cta').forEach(e=>rio.observe(e));
+$$('.plan').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');c.style.setProperty('--ry',(x-.5)*8+'deg');c.style.setProperty('--rx',-(y-.5)*8+'deg')});c.addEventListener('pointerleave',()=>{c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')})});
 </script>
 </body>
 </html>
