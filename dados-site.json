@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T23:22:36.192Z",
+ "updated": "2026-11-22T23:24:00.023Z",
  "WA_NUMBER": "5546933001459",
  "WA_MSG": "Olá, Guilherme! Vim pelo seu site e quero falar sobre um projeto.",
  "P": [
@@ -82,29 +82,6 @@
    "svc": "Edição de vídeo, legendas, sincronia com o áudio e transições",
    "desc": "Vídeo meme de futevôlei, em formato vertical, com edição no ritmo do áudio.",
    "video": true
-  },
-  {
-   "id": "teste",
-   "name": "teste",
-   "cats": [
-    "teste"
-   ],
-   "tag": "teste",
-   "pa": "#8ba7e8",
-   "font": "",
-   "pal": [
-    "#8BA7E8",
-    "#0D214A",
-    "#F5F5F5"
-   ],
-   "svc": "teste",
-   "desc": "teste",
-   "cover": "uploads/teste-c-1mwqu952yjb.webp",
-   "imgs": [
-    "uploads/teste-0-1sltser4kr3.webp"
-   ],
-   "video": false,
-   "url": ""
   }
  ],
  "SERVICES": [
