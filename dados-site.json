@@ -1,0 +1,173 @@
+{
+ "updated": "2026-11-22T23:18:52.985Z",
+ "WA_NUMBER": "5546933001459",
+ "WA_MSG": "Olá, Guilherme! Vim pelo seu site e quero falar sobre um projeto.",
+ "P": [
+  {
+   "id": "orvyn",
+   "url": "projeto-orvyn.html",
+   "name": "Orvyn",
+   "cats": [
+    "Identidade visual",
+    "Branding"
+   ],
+   "tag": "O mundo já viu o suficiente!",
+   "pa": "#a78bfa",
+   "font": "Orbitron",
+   "pal": [
+    "#A78BFA",
+    "#1C1338",
+    "#F5F5F5"
+   ],
+   "svc": "Logotipo, versões, paleta, tipografia, mockup e padrão",
+   "desc": "Marca de atitude, com letras geométricas e cortes retos. O logotipo funciona em versões roxa, branca e sobre fundo escuro, e o slogan reforça o tom confiante da marca.",
+   "video": false
+  },
+  {
+   "id": "dalton",
+   "url": "projeto-dalton-neres.html",
+   "name": "Dalton Neres",
+   "cats": [
+    "Identidade visual",
+    "Web design"
+   ],
+   "tag": "Full Stack Developer criando experiências digitais modernas e funcionais!",
+   "pa": "#0559f5",
+   "font": "Sora",
+   "pal": [
+    "#0559F5",
+    "#1C133B",
+    "#F5F5F5"
+   ],
+   "svc": "Logotipo, construção geométrica, paleta, tipografia e layout do site",
+   "desc": "Identidade para um desenvolvedor Full Stack. O monograma DN nasce de uma construção geométrica e se aplica em materiais e no layout do site, em azul, preto e branco.",
+   "video": false
+  },
+  {
+   "id": "zenbee",
+   "url": "projeto-zenbee.html",
+   "name": "Zenbee",
+   "cats": [
+    "Motion design",
+    "Edição de vídeo"
+   ],
+   "tag": "Vídeo de apresentação da marca Zenbee Mobi.",
+   "pa": "#f4b510",
+   "font": "",
+   "pal": [
+    "#F4B510",
+    "#2377BF",
+    "#0F2350"
+   ],
+   "svc": "Mascote em 3D, transições e revelação do logotipo",
+   "desc": "Vídeo de apresentação da marca Zenbee Mobi.",
+   "video": true
+  },
+  {
+   "id": "chapa",
+   "url": "projeto-chapa.html",
+   "name": "Cada chapa que errar",
+   "cats": [
+    "Edição de vídeo",
+    "Meme"
+   ],
+   "tag": "Vídeo meme de futevôlei.",
+   "pa": "#2e7de9",
+   "font": "",
+   "pal": [
+    "#2E7DE9",
+    "#FFD400",
+    "#E8CFA0"
+   ],
+   "svc": "Edição de vídeo, legendas, sincronia com o áudio e transições",
+   "desc": "Vídeo meme de futevôlei, em formato vertical, com edição no ritmo do áudio.",
+   "video": true
+  },
+  {
+   "id": "guilherme-design",
+   "name": "Guilherme Design",
+   "cats": [
+    "Branding"
+   ],
+   "tag": "Vídeo curto 3D do mascote apresentando a marca no final",
+   "pa": "#8ba7e8",
+   "font": "",
+   "pal": [
+    "#8BA7E8",
+    "#0D214A",
+    "#F5F5F5"
+   ],
+   "svc": "",
+   "desc": "teste",
+   "cover": "uploads/guilherme-design-c-1gbunci2kv.webp",
+   "imgs": [
+    "uploads/guilherme-design-0-1sltser4kr3.webp"
+   ],
+   "video": false,
+   "url": ""
+  },
+  {
+   "id": "teste",
+   "name": "teste",
+   "cats": [
+    "teste"
+   ],
+   "tag": "teste",
+   "pa": "#8ba7e8",
+   "font": "",
+   "pal": [
+    "#8BA7E8",
+    "#0D214A",
+    "#F5F5F5"
+   ],
+   "svc": "teste",
+   "desc": "teste",
+   "cover": "uploads/teste-c-1mwqu952yjb.webp",
+   "imgs": [
+    "uploads/teste-0-1sltser4kr3.webp"
+   ],
+   "video": false,
+   "url": ""
+  }
+ ],
+ "SERVICES": [
+  [
+   "Motion Design",
+   "O design ganha movimento com animações que despertam atenção e tornam cada detalhe mais expressivo."
+  ],
+  [
+   "Design Gráfico",
+   "Criação de artes que unem criatividade e identidade para destacar sua marca em cada detalhe."
+  ],
+  [
+   "Edições de Vídeos",
+   "Uma edição que transforma cenas em experiências visuais capazes de envolver, surpreender e marcar."
+  ]
+ ],
+ "FAQ": [
+  [
+   "Quais serviços você oferece?",
+   "Design gráfico, edição de vídeos e motion design. Posso atuar em uma frente só ou combinar as três para manter sua marca coerente em todos os formatos."
+  ],
+  [
+   "Qual é o prazo médio de um projeto?",
+   "Posts e cortes de vídeo costumam sair em poucos dias; identidades visuais e animações levam algumas semanas. O prazo exato é fechado na proposta."
+  ],
+  [
+   "Como funciona o orçamento?",
+   "Você conta o objetivo, o formato e a quantidade de peças pelo formulário ou WhatsApp. Eu respondo com uma proposta clara, sem compromisso."
+  ],
+  [
+   "Quantas revisões estão incluídas?",
+   "Cada proposta inclui rodadas de ajustes, normalmente duas, para refinar o resultado. Mudanças maiores de escopo são combinadas antes."
+  ],
+  [
+   "Quais arquivos recebo na entrega?",
+   "Arquivos finais prontos para uso, como PNG, JPG, PDF e MP4. Arquivos editáveis podem ser incluídos quando combinado na proposta."
+  ],
+  [
+   "Atende marcas de outras cidades?",
+   "Sim. O atendimento é 100% online, por WhatsApp e videochamada, para marcas de todo o Brasil."
+  ]
+ ]
+}
