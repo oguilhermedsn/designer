@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T00:14:15.843Z",
+ "updated": "2026-11-23T00:20:43.537Z",
  "WA_NUMBER": "5546933001459",
  "WA_MSG": "Olá, Guilherme! Vim pelo seu site e quero falar sobre um projeto.",
  "P": [
@@ -90,17 +90,18 @@
     "Logotipo",
     "Design Gráfico"
    ],
-   "tag": "",
-   "pa": "#8ba7e8",
+   "tag": "Uma composição que une referências clássicas da cultura automotiva à identidade da AREA 047.",
+   "pa": "#ff0101",
    "font": "",
    "pal": [
-    "#8BA7E8",
-    "#0D214A",
-    "#F5F5F5"
+    "#BF0000",
+    "#FF0101",
+    "#F5F5F5",
+    "#050505"
    ],
-   "svc": "",
-   "desc": "",
-   "cover": "",
+   "svc": "Logotipo, Paleta de cores, ",
+   "desc": "Identidade visual inspirada na cultura custom automotiva, combinando carro clássico, elementos de pintura e lettering expressivo em um emblema de personalidade marcante.",
+   "cover": "uploads/area-047-detailing-c-1mwqu952yjb.webp",
    "imgs": [
     "uploads/area-047-detailing-0-1sltser4kr3.webp"
    ],
