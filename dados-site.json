@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T05:13:23.176Z",
+ "updated": "2026-11-23T05:17:40.414Z",
  "WA_NUMBER": "5546933001459",
  "WA_MSG": "Olá, Guilherme! Vim pelo seu site e quero falar sobre um projeto.",
  "P": [
@@ -150,16 +150,5 @@
    "Sim. O atendimento é 100% online, por WhatsApp e videochamada, para marcas de todo o Brasil."
   ]
  ],
- "PLANS": [
-  {
-   "name": "PACOTE MENSAL",
-   "price": 119.9,
-   "items": [
-    "10x Artes para post",
-    "5x Materiais para impressão",
-    "3 Edições de vídeos"
-   ],
-   "hl": true
-  }
- ]
+ "PLANS": []
 }
