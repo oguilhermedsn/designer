@@ -1,98 +1,91 @@
 {
- "updated": "2026-11-23T22:55:32.181Z",
+ "updated": "2026-11-26T03:12:09.153Z",
  "WA_NUMBER": "5546933001459",
  "WA_MSG": "Olá, Guilherme! Vim pelo seu site e quero falar sobre um projeto.",
  "P": [
   {
    "id": "orvyn",
-   "url": "projeto-orvyn.html",
-   "name": "Orvyn",
-   "cats": [
-    "Identidade visual",
-    "Branding"
-   ],
-   "tag": "O mundo já viu o suficiente!",
    "pa": "#a78bfa",
-   "font": "Orbitron",
    "pal": [
     "#A78BFA",
     "#1C1338",
     "#F5F5F5"
    ],
    "svc": "Logotipo, versões, paleta, tipografia, mockup e padrão",
+   "tag": "O mundo já viu o suficiente!",
+   "url": "projeto-orvyn.html",
+   "cats": [
+    "Identidade visual",
+    "Branding"
+   ],
    "desc": "Marca de atitude, com letras geométricas e cortes retos. O logotipo funciona em versões roxa, branca e sobre fundo escuro, e o slogan reforça o tom confiante da marca.",
+   "font": "Orbitron",
+   "name": "Orvyn",
    "video": false
   },
   {
    "id": "dalton",
-   "url": "projeto-dalton-neres.html",
-   "name": "Dalton Neres",
-   "cats": [
-    "Identidade visual",
-    "Web design"
-   ],
-   "tag": "Full Stack Developer criando experiências digitais modernas e funcionais!",
    "pa": "#0559f5",
-   "font": "Sora",
    "pal": [
     "#0559F5",
     "#1C133B",
     "#F5F5F5"
    ],
    "svc": "Logotipo, construção geométrica, paleta, tipografia e layout do site",
+   "tag": "Full Stack Developer criando experiências digitais modernas e funcionais!",
+   "url": "projeto-dalton-neres.html",
+   "cats": [
+    "Identidade visual",
+    "Web design"
+   ],
    "desc": "Identidade para um desenvolvedor Full Stack. O monograma DN nasce de uma construção geométrica e se aplica em materiais e no layout do site, em azul, preto e branco.",
+   "font": "Sora",
+   "name": "Dalton Neres",
    "video": false
   },
   {
    "id": "zenbee",
-   "url": "projeto-zenbee.html",
-   "name": "Zenbee",
-   "cats": [
-    "Motion design",
-    "Edição de vídeo"
-   ],
-   "tag": "Vídeo de apresentação da marca Zenbee Mobi.",
    "pa": "#f4b510",
-   "font": "",
    "pal": [
     "#F4B510",
     "#2377BF",
     "#0F2350"
    ],
    "svc": "Mascote em 3D, transições e revelação do logotipo",
+   "tag": "Vídeo de apresentação da marca Zenbee Mobi.",
+   "url": "projeto-zenbee.html",
+   "cats": [
+    "Motion design",
+    "Edição de vídeo"
+   ],
    "desc": "Vídeo de apresentação da marca Zenbee Mobi.",
+   "font": "",
+   "name": "Zenbee",
    "video": true
   },
   {
    "id": "chapa",
-   "url": "projeto-chapa.html",
-   "name": "Cada chapa que errar",
-   "cats": [
-    "Edição de vídeo",
-    "Meme"
-   ],
-   "tag": "Vídeo meme de futevôlei.",
    "pa": "#2e7de9",
-   "font": "",
    "pal": [
     "#2E7DE9",
     "#FFD400",
     "#E8CFA0"
    ],
    "svc": "Edição de vídeo, legendas, sincronia com o áudio e transições",
+   "tag": "Vídeo meme de futevôlei.",
+   "url": "projeto-chapa.html",
+   "cats": [
+    "Edição de vídeo",
+    "Meme"
+   ],
    "desc": "Vídeo meme de futevôlei, em formato vertical, com edição no ritmo do áudio.",
+   "font": "",
+   "name": "Cada chapa que errar",
    "video": true
   },
   {
    "id": "area-047-detailing",
-   "name": "Área 047 Detailing",
-   "cats": [
-    "Logotipo",
-    "Design Gráfico"
-   ],
-   "tag": "Uma composição que une referências clássicas da cultura automotiva à identidade da AREA 047.",
    "pa": "#ff0101",
-   "font": "",
    "pal": [
     "#BF0000",
     "#FF0101",
@@ -100,14 +93,21 @@
     "#050505"
    ],
    "svc": "",
+   "tag": "Uma composição que une referências clássicas da cultura automotiva à identidade da AREA 047.",
+   "url": "",
+   "cats": [
+    "Logotipo",
+    "Design Gráfico"
+   ],
    "desc": "Identidade visual inspirada na cultura custom automotiva, combinando carro clássico, elementos de pintura e lettering expressivo em um emblema de personalidade marcante.",
-   "cover": "uploads/area-047-detailing-c-14s0u992lnb.webp",
+   "font": "",
    "imgs": [
     "uploads/area-047-detailing-0-am5mqn3rvb.webp"
    ],
-   "video": false,
-   "url": "",
-   "tipo": "Desenvolvimento de logotipo"
+   "name": "Área 047 Detailing",
+   "tipo": "Desenvolvimento de logotipo",
+   "cover": "uploads/area-047-detailing-c-14s0u992lnb.webp",
+   "video": false
   }
  ],
  "SERVICES": [
